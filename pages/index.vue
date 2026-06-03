@@ -1,112 +1,100 @@
 <template>
   <div>
-    <!-- Hero Slider -->
-    <section class="mc-hero-section">
-      <div class="mc-container mc-hero-slider">
-        <!-- Slide 1: Wheelchair -->
-        <div class="mc-hero-slide" :class="{ active: currentHeroSlide === 0 }">
-          <div class="mc-hero-content">
-            <span class="mc-hero-tagline">
-              🔥 India's Lightest Carbon Electric Wheelchair
-            </span>
-            <h1 class="mc-hero-title">Freedom to move.<br><em>Freedom to do more.</em></h1>
-            <p class="mc-hero-description">Experience the lightweight revolution. Crafted from aerospace-grade carbon fiber, folding in 1 second, and packing into any vehicle trunk with zero hassle.</p>
-            <div class="mc-hero-actions">
-              <button class="mc-btn mc-btn-accent" @click="scrollToSection('mc-products-section')">Explore Wheelchairs</button>
-              <button class="mc-btn mc-btn-secondary" @click="scrollToSection('mc-quiz-section')">Find Your Fit</button>
-            </div>
-            <div class="mc-hero-trust">
-              <div class="mc-hero-avatars">
-                <div class="mc-hero-avatar" style="background-color: #cbd5e1;"></div>
-                <div class="mc-hero-avatar" style="background-color: #94a3b8;"></div>
-                <div class="mc-hero-avatar" style="background-color: #64748b;"></div>
-              </div>
-              <div class="mc-hero-trust-text">⭐ <strong>4.9/5</strong> trust rating from 2,500+ mobility users</div>
-            </div>
+    <!-- Premium Hero Section with YouTube Video Banner -->
+    <section class="mc-hero-section-new">
+      <div class="mc-container mc-hero-grid-new">
+        <div class="mc-hero-content-new">
+          <span class="mc-hero-tagline-new">
+            🇮🇳 Made in India. Built to Global Standards.
+          </span>
+          <h1 class="mc-hero-title-new">
+            Empowering Mobility.<br>
+            <span>Restoring Independence.</span>
+          </h1>
+          <p class="mc-hero-description-new">
+            Discover advanced, clinician-backed physical rehabilitation systems. From high-durability electric wheelchairs to specialized patient lifts, we build adaptive products tailored to your needs.
+          </p>
+          <div class="mc-hero-actions-new">
+            <button class="mc-btn mc-btn-accent" @click="scrollToSection('mc-products-section')">
+              Explore Products
+            </button>
+            <a href="https://www.youtube.com/@morecare.mobility" target="_blank" class="mc-btn mc-btn-secondary">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="color: #FF0000; margin-right: 4px;"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11C4.482 20.454 12 20.454 12 20.454s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Visit YouTube Channel
+            </a>
           </div>
-          <div class="mc-hero-image-wrapper">
-            <div class="mc-hero-visual">
-              <svg class="mc-hero-visual-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
-                <circle cx="38" cy="68" r="16" stroke="var(--mc-accent)" stroke-width="4"/>
-                <circle cx="72" cy="68" r="9" stroke="var(--mc-accent)" stroke-width="3"/>
-                <rect x="25" y="32" width="28" height="22" rx="4" fill="var(--mc-accent)" fill-opacity="0.1" stroke="var(--mc-accent)"/>
-                <path d="M25 45h32M38 68l18-28M28 20h22M72 68l-12-28" stroke="var(--mc-accent)" stroke-linecap="round"/>
-              </svg>
-              <div class="mc-hero-badge-float mc-float-left">
-                <svg width="18" height="18" fill="none" stroke="var(--mc-teal)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <div>
-                  <div style="font-size: 11px; font-weight: 700;">14.2 kg Only</div>
-                  <div style="font-size: 9px; color: var(--mc-text-muted);">Carbon Fiber Frame</div>
-                </div>
-              </div>
-              <div class="mc-hero-badge-float mc-float-right">
-                <svg width="18" height="18" fill="none" stroke="var(--mc-coral)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <div>
-                  <div style="font-size: 11px; font-weight: 700;">18km Range</div>
-                  <div style="font-size: 9px; color: var(--mc-text-muted);">Smart Lithium Power</div>
-                </div>
-              </div>
-            </div>
+          <div class="mc-hero-trust-new">
+            <div class="mc-trust-stars">★★★★★</div>
+            <div class="mc-trust-text">Trusted by leading therapists & caregivers across India</div>
           </div>
         </div>
 
-        <!-- Slide 2: Cushion -->
-        <div class="mc-hero-slide" :class="{ active: currentHeroSlide === 1 }">
-          <div class="mc-hero-content">
-            <span class="mc-hero-tagline">
-              ✨ Bestselling Tailbone Relief Cushion
-            </span>
-            <h1 class="mc-hero-title">Sit pain-free.<br><em>Move with comfort.</em></h1>
-            <p class="mc-hero-description">The ultimate seat ergonomic solution. 36 interconnected inflatable air cells dynamically distribute weight to erase tailbone pressure, pelvic stress, and lower back aches.</p>
-            <div class="mc-hero-actions">
-              <NuxtLink to="/product/MC-C01" class="mc-btn mc-btn-accent">Shop Ergo-Air</NuxtLink>
-              <button class="mc-btn mc-btn-secondary" @click="scrollToSection('mc-hotspot-section')">See Technology</button>
-            </div>
-            <div class="mc-hero-trust">
-              <div class="mc-hero-avatars">
-                <div class="mc-hero-avatar" style="background-color: #cbd5e1;"></div>
-                <div class="mc-hero-avatar" style="background-color: #94a3b8;"></div>
-                <div class="mc-hero-avatar" style="background-color: #64748b;"></div>
-              </div>
-              <div class="mc-hero-trust-text">⭐ <strong>4.8/5</strong> based on 10,000+ verified cushion reviews</div>
-            </div>
-          </div>
-          <div class="mc-hero-image-wrapper">
-            <div class="mc-hero-visual">
-              <svg class="mc-hero-visual-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
-                <rect x="22" y="22" width="56" height="56" rx="10" stroke="var(--mc-accent)" stroke-width="3.5" fill="var(--mc-accent)" fill-opacity="0.05"/>
-                <circle cx="34" cy="34" r="5" fill="var(--mc-accent)"/>
-                <circle cx="50" cy="34" r="5" fill="var(--mc-accent)"/>
-                <circle cx="66" cy="34" r="5" fill="var(--mc-accent)"/>
-                <circle cx="34" cy="50" r="5" fill="var(--mc-accent)"/>
-                <circle cx="50" cy="50" r="6" stroke="var(--mc-accent)" stroke-width="2"/>
-                <circle cx="66" cy="50" r="5" fill="var(--mc-accent)"/>
-                <circle cx="34" cy="66" r="5" fill="var(--mc-accent)"/>
-                <circle cx="50" cy="66" r="5" fill="var(--mc-accent)"/>
-                <circle cx="66" cy="66" r="5" fill="var(--mc-accent)"/>
-              </svg>
-              <div class="mc-hero-badge-float mc-float-left">
-                <svg width="18" height="18" fill="none" stroke="var(--mc-teal)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                <div>
-                  <div style="font-size: 11px; font-weight: 700;">80% Pressure Drop</div>
-                  <div style="font-size: 9px; color: var(--mc-text-muted);">Clinically Validated</div>
-                </div>
-              </div>
-              <div class="mc-hero-badge-float mc-float-right">
-                <svg width="18" height="18" fill="none" stroke="var(--mc-coral)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                <div>
-                  <div style="font-size: 11px; font-weight: 700;">Sit 10+ Hours</div>
-                  <div style="font-size: 9px; color: var(--mc-text-muted);">Fatigue-Free Sitting</div>
-                </div>
-              </div>
+        <div class="mc-hero-video-wrapper-new">
+          <div class="mc-video-card-new">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/videoseries?list=PLuG0bC2PvZcK39qC7x_4hV9P-e0GZl2y9" 
+              title="Morecare Mobility & Rehabilitation Solutions Video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+            ></iframe>
+            <div class="mc-video-badge-new">
+              <span class="mc-video-badge-dot"></span> Featured Demo
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Hero Navigation Dots -->
-        <div class="mc-hero-nav-btns">
-          <div class="mc-hero-dot" :class="{ active: currentHeroSlide === 0 }" @click="selectHeroSlide(0)"></div>
-          <div class="mc-hero-dot" :class="{ active: currentHeroSlide === 1 }" @click="selectHeroSlide(1)"></div>
+    <!-- Highlights Section -->
+    <section class="mc-highlights-section-new">
+      <div class="mc-container">
+        <div class="mc-highlights-grid-new">
+          <!-- Made in India -->
+          <div class="mc-highlight-card-new">
+            <div class="mc-highlight-icon-wrap-new">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="mc-icon-orange">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mc-highlight-title-new">Made in India</h3>
+            <p class="mc-highlight-desc-new">Designed with pride, built to global standards</p>
+          </div>
+
+          <!-- Customized Solutions -->
+          <div class="mc-highlight-card-new">
+            <div class="mc-highlight-icon-wrap-new">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="mc-icon-blue">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+              </svg>
+            </div>
+            <h3 class="mc-highlight-title-new">Customized Solutions</h3>
+            <p class="mc-highlight-desc-new">Adaptive products tailored to every need</p>
+          </div>
+
+          <!-- Therapist-Backed -->
+          <div class="mc-highlight-card-new">
+            <div class="mc-highlight-icon-wrap-new">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="mc-icon-teal">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.03 0 1.9.693 2.166 1.638m-7.377 12.408l-3.328 3.329a.75.75 0 01-1.06 0L2.122 16.5a.75.75 0 010-1.061l3.329-3.328m0 0A3.75 3.75 0 1010.5 7.5a3.75 3.75 0 00-5.048 4.623z" />
+              </svg>
+            </div>
+            <h3 class="mc-highlight-title-new">Therapist-Backed</h3>
+            <p class="mc-highlight-desc-new">Developed with clinical expertise for better outcomes</p>
+          </div>
+
+          <!-- Trusted Quality -->
+          <div class="mc-highlight-card-new">
+            <div class="mc-highlight-icon-wrap-new">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="mc-icon-blue-dark">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 class="mc-highlight-title-new">Trusted Quality</h3>
+            <p class="mc-highlight-desc-new">Durable & safe, built for long-term use</p>
+          </div>
         </div>
       </div>
     </section>
@@ -533,31 +521,11 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed } from 'vue'
 import { PRODUCTS } from '~/utils/products'
 import { useCartStore } from '~/stores/cart'
 
 const cartStore = useCartStore()
-
-// --- Hero Slider State & Logic ---
-const currentHeroSlide = ref(0)
-let heroInterval = null
-
-const selectHeroSlide = (idx) => {
-  currentHeroSlide.value = idx
-  resetHeroAutoSlider()
-}
-
-const startHeroAutoSlider = () => {
-  heroInterval = setInterval(() => {
-    currentHeroSlide.value = (currentHeroSlide.value + 1) % 2
-  }, 6000)
-}
-
-const resetHeroAutoSlider = () => {
-  if (heroInterval) clearInterval(heroInterval)
-  startHeroAutoSlider()
-}
 
 // --- Category Selection ---
 const currentCategory = ref('all')
@@ -689,13 +657,7 @@ const scrollToSection = (id) => {
   }
 }
 
-onMounted(() => {
-  startHeroAutoSlider()
-})
 
-onBeforeUnmount(() => {
-  if (heroInterval) clearInterval(heroInterval)
-})
 </script>
 
 <style scoped>
@@ -716,5 +678,258 @@ onBeforeUnmount(() => {
 }
 .mc-categories-section .mc-category-circle-card {
   cursor: pointer;
+}
+
+/* --- New Hero Section with YouTube Video --- */
+.mc-hero-section-new {
+  background: linear-gradient(135deg, #f0f7fc 0%, #e2eef6 100%);
+  padding: 80px 0;
+  border-bottom: 1px solid var(--mc-border);
+}
+
+.mc-hero-grid-new {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+}
+
+@media (max-width: 991px) {
+  .mc-hero-grid-new {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+.mc-hero-content-new {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+  .mc-hero-content-new {
+    align-items: center;
+  }
+}
+
+.mc-hero-tagline-new {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mc-accent);
+  background-color: var(--mc-bright-white);
+  padding: 8px 18px;
+  border-radius: var(--mc-radius-full);
+  margin-bottom: 24px;
+  box-shadow: var(--mc-shadow-sm);
+  border: 1px solid var(--mc-border-light);
+}
+
+.mc-hero-title-new {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.mc-hero-title-new span {
+  color: var(--mc-primary);
+}
+
+.mc-hero-description-new {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--mc-text-muted);
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.mc-hero-actions-new {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.mc-hero-trust-new {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--mc-text-muted);
+}
+
+.mc-trust-stars {
+  color: var(--mc-coral);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.mc-hero-video-wrapper-new {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mc-video-card-new {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #000;
+  border-radius: var(--mc-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--mc-shadow-xl);
+  border: 4px solid var(--mc-bright-white);
+  transition: transform var(--mc-transition-smooth);
+}
+
+.mc-video-card-new:hover {
+  transform: scale(1.02);
+}
+
+.mc-video-badge-new {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--mc-radius-full);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.mc-video-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Highlights Section --- */
+.mc-highlights-section-new {
+  background-color: var(--mc-bright-white);
+  padding: 60px 0;
+  border-bottom: 1px solid var(--mc-border-light);
+}
+
+.mc-highlights-grid-new {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .mc-highlights-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mc-highlights-grid-new {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.mc-highlight-card-new {
+  background-color: var(--mc-bg);
+  padding: 30px 24px;
+  border-radius: var(--mc-radius-md);
+  border: 1px solid var(--mc-border);
+  transition: all var(--mc-transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.mc-highlight-card-new::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--mc-accent);
+  opacity: 0;
+  transition: opacity var(--mc-transition-fast);
+}
+
+.mc-highlight-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--mc-shadow-lg);
+  border-color: var(--mc-accent);
+}
+
+.mc-highlight-card-new:hover::after {
+  opacity: 1;
+}
+
+.mc-highlight-icon-wrap-new {
+  background-color: var(--mc-bright-white);
+  padding: 10px;
+  border-radius: var(--mc-radius-sm);
+  margin-bottom: 20px;
+  box-shadow: var(--mc-shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-highlight-icon-wrap-new svg {
+  transition: transform var(--mc-transition-smooth);
+}
+
+.mc-highlight-card-new:hover .mc-highlight-icon-wrap-new svg {
+  transform: scale(1.1);
+}
+
+.mc-icon-orange {
+  color: var(--mc-coral);
+}
+.mc-icon-blue {
+  color: var(--mc-primary);
+}
+.mc-icon-teal {
+  color: var(--mc-teal);
+}
+.mc-icon-blue-dark {
+  color: #0369a1;
+}
+
+.mc-highlight-title-new {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--mc-primary);
+}
+
+.mc-highlight-desc-new {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--mc-text-muted);
 }
 </style>
