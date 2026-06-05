@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body class="mc-scope">
 
@@ -16,7 +16,7 @@
        ANNOUNCEMENT BAR
        ========================================================================== -->
   <div class="mc-announce-bar">
-    <div class="mc-container">
+    <div class="mc-announce-bar-inner">
       <div class="mc-announce-slider">
         <div class="mc-announce-slide active">🚚 Free Express Shipping across India on orders above ₹4,999!</div>
         <div class="mc-announce-slide">⚡ Summer Ergonomics Sale: Get 10% off with code: MORECOMFORT</div>
@@ -48,74 +48,36 @@
       <nav class="mc-nav-desktop">
         <a href="index.html" class="mc-nav-link">Home</a>
         <div class="mc-nav-dropdown-wrapper">
-          <a href="index.html#mc-products-section" class="mc-nav-link">
+          <a href="index.html#mc-products-section" class="mc-nav-link active">
             Products
             <svg class="mc-chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <div class="mc-mega-menu">
             <div class="mc-mega-menu-grid">
-              <!-- Column 1: Electric Wheelchairs -->
               <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Electric Wheelchairs</h4>
+                <h4 class="mc-mega-menu-title">Shop for CP Kids</h4>
                 <ul class="mc-mega-menu-list">
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Carbon X Power Chair <span class="mc-sku-tag active">Active</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Transit Lite Power <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Heavy-Duty Power <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Fold-n-Go Travel <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Off-Road All-Terrain <span class="mc-sku-tag temp">Temp SKU</span></a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">CP Wheelchairs</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Seating & Posture</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Standing Frames</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Therapy Aids</a></li>
                 </ul>
               </div>
-              <!-- Column 2: Manual Wheelchairs -->
               <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Manual Wheelchairs</h4>
+                <h4 class="mc-mega-menu-title">Shop for Adults</h4>
                 <ul class="mc-mega-menu-list">
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Transit Lite Manual <span class="mc-sku-tag active">Active</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Ergo-Active Comfort <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Lightweight Travel <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Reclining Rehab <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Patient Mover Lite <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                </ul>
-              </div>
-              <!-- Column 3: Comfort Cushions -->
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Seat Cushions</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="product.html" class="mc-mega-menu-item">Ergo-Air Cushion <span class="mc-sku-tag active">Active</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Memory Foam Coccyx <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Cool-Gel Orthopedic <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Honeycomb Relief Pad <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Lumbar Support Back <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                </ul>
-              </div>
-              <!-- Column 4: Foot Insoles -->
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Foot Insoles</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Cloud-Gel Orthotics <span class="mc-sku-tag active">Active</span></a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Arch-Active Sports <span class="mc-sku-tag active">Active</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Plantar Fasciitis Gel <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Diabetic Comfort <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Heel Pain Cups <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                </ul>
-              </div>
-              <!-- Column 5: Neck & Sleep -->
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Neck & Sleep</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Contoured Cervical <span class="mc-sku-tag active">Active</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Travel Memory Neck <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Orthopedic Knee <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Bed Wedge Elevation <span class="mc-sku-tag temp">Temp SKU</span></a></li>
-                  <li><a class="mc-mega-menu-item disabled">Full Body Sleep <span class="mc-sku-tag temp">Temp SKU</span></a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Electric Wheelchairs</a></li>
+                  <li><a href="product.html" class="mc-mega-menu-item">Seat Cushions</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Orthotic Insoles</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Cervical Pillows</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Walking Aids</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <a href="index.html#mc-hotspot-section" class="mc-nav-link">Technology</a>
-        <a href="index.html#mc-quiz-section" class="mc-nav-link">Fit Finder</a>
-        <a href="product.html" class="mc-nav-link active">Cushion Page</a>
-        <a href="index.html#mc-faq-section" class="mc-nav-link">Help</a>
+        <a href="index.html#mc-about-section" class="mc-nav-link">About Us</a>
+        <a href="index.html#mc-maps-section" class="mc-nav-link">Contact Us</a>
       </nav>
 
       <!-- Header Action Icons -->
@@ -242,7 +204,7 @@
     <div class="mc-product-page-grid">
       
       <!-- Gallery Column -->
-      <div class="mc-gallery-wrapper">
+      <div class="mc-gallery-wrapper mc-reveal">
         <div class="mc-gallery-main">
           <div id="mc-main-gallery-svg">
             <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -282,7 +244,7 @@
       </div>
 
       <!-- Info Column -->
-      <div class="mc-prod-detail-info">
+      <div class="mc-prod-detail-info mc-reveal delay-100">
         <span class="mc-modal-meta">Comfort Cushions</span>
         <h1 class="mc-modal-title" style="font-size: 32px; margin-bottom: 8px;">Morecare Ergo-Air Seat Cushion</h1>
         
@@ -342,7 +304,7 @@
     </div>
 
     <!-- Product specification tabs -->
-    <div class="mc-product-tabs">
+    <div class="mc-product-tabs mc-reveal delay-200">
       <button class="mc-product-tab active" data-tab="desc">Product Description</button>
       <button class="mc-product-tab" data-tab="specs">Specifications</button>
       <button class="mc-product-tab" data-tab="care">Care & Usage</button>
@@ -554,7 +516,16 @@
     </div>
   </div>
 
+  <!-- Sticky Bottom Purchase Bar (Mobile) -->
+  <div class="mc-mobile-sticky-bar" id="mc-mobile-sticky-bar">
+    <div class="mc-sticky-info">
+      <span class="mc-sticky-title">Ergo-Air Seat Cushion</span>
+      <span class="mc-sticky-price">₹4,999</span>
+    </div>
+    <button class="mc-btn mc-btn-accent mc-sticky-buy-btn" id="mc-sticky-buy-btn">Add to Cart</button>
+  </div>
+
   <!-- Scripts -->
-  <script src="app.js"></script>
+  <script type="module" src="src/product.js"></script>
 </body>
 </html>

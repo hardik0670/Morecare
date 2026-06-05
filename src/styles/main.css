@@ -1,0 +1,11 @@
+/* ==========================================================================
+   MORECARE STYLES ENTRY FILE (main.css)
+   Imports all modular stylesheets for development and bundling.
+   ========================================================================== */
+
+@import "./variables.css";
+@import "./reset.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./sections.css";
+@import "./animations.css";

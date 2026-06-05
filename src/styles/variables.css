@@ -1,0 +1,127 @@
+/* ==========================================================================
+   DESIGN TOKENS & SYSTEM VARIABLES — Frido-Style (variables.css)
+   Full-width layout system with fluid scaling for mobile → 4K
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Lato:wght@400;700;900&display=swap');
+
+:root {
+  /* ── Font Families ── */
+  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-lato: 'Lato', system-ui, -apple-system, sans-serif;
+
+  /* ── Brand Color Palette ── */
+  --mc-primary: #1476AF;
+  --mc-primary-dark: #0d5a87;
+  --mc-primary-light: #1b89c9;
+  --mc-primary-50: #e8f4fa;
+  --mc-primary-100: #c5e3f2;
+
+  --mc-accent: #1476AF;
+  --mc-accent-hover: #0e5f8f;
+  --mc-accent-glow: rgba(20, 118, 175, 0.12);
+
+  /* Lime Green from logo */
+  --mc-lime: #BFFF00;
+  --mc-lime-dark: #9acc00;
+  --mc-lime-glow: rgba(191, 255, 0, 0.15);
+
+  /* Cyan from logo */
+  --mc-cyan: #09A8F2;
+  --mc-cyan-glow: rgba(9, 168, 242, 0.12);
+
+  /* Semantic Colors */
+  --mc-teal: #0d9488;
+  --mc-teal-light: #f0fdfa;
+  --mc-coral: #f97316;
+  --mc-coral-light: #fff7ed;
+  --mc-success: #10b981;
+  --mc-error: #ef4444;
+
+  /* ── Neutrals ── */
+  --mc-white: #ffffff;
+  --mc-bg: #f5f8fb;
+  --mc-bg-warm: #f8f9fa;
+  --mc-card-bg: #ffffff;
+  --mc-text-main: #1a2332;
+  --mc-text-body: #374151;
+  --mc-text-muted: #5a6a7a;
+  --mc-text-light: #94a3b8;
+  --mc-border: #e2e8f0;
+  --mc-border-light: #f1f5f9;
+
+  /* ── Gradients (Frido-inspired) ── */
+  --mc-gradient-hero: linear-gradient(135deg, #e8f4fa 0%, #f0f7fc 40%, #f8fbfe 100%);
+  --mc-gradient-dark: linear-gradient(180deg, #1476AF 0%, #0a4d73 100%);
+  --mc-gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fbfe 100%);
+  --mc-gradient-section: linear-gradient(180deg, #f5f8fb 0%, #ffffff 100%);
+  --mc-gradient-trust: linear-gradient(90deg, #1476AF 0%, #09A8F2 50%, #0d9488 100%);
+
+  /* ── Fluid Spacing Scale (clamp-based) ── */
+  --mc-space-1: 4px;
+  --mc-space-2: 8px;
+  --mc-space-3: 12px;
+  --mc-space-4: 16px;
+  --mc-space-5: 20px;
+  --mc-space-6: 24px;
+  --mc-space-8: 32px;
+  --mc-space-10: 40px;
+  --mc-space-12: 48px;
+  --mc-space-16: 64px;
+  --mc-space-20: 80px;
+  --mc-space-24: 96px;
+  --mc-space-32: 128px;
+
+  /* ── Fluid Container Padding (scales from mobile to 4K) ── */
+  --mc-gutter: clamp(16px, 5vw, 120px);
+  --mc-section-py: clamp(48px, 8vw, 120px);
+
+  /* ── Border Radius (Frido: generous rounding) ── */
+  --mc-radius-xs: 4px;
+  --mc-radius-sm: 8px;
+  --mc-radius-md: 12px;
+  --mc-radius-lg: 16px;
+  --mc-radius-xl: 24px;
+  --mc-radius-2xl: 32px;
+  --mc-radius-full: 9999px;
+
+  /* ── Shadows (Frido: soft diffused) ── */
+  --mc-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --mc-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --mc-shadow-md: 0 4px 8px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --mc-shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -4px rgba(15, 23, 42, 0.04);
+  --mc-shadow-xl: 0 24px 48px -12px rgba(15, 23, 42, 0.12);
+  --mc-shadow-glow: 0 0 20px rgba(20, 118, 175, 0.12);
+  --mc-shadow-glow-hover: 0 0 32px rgba(20, 118, 175, 0.2);
+  --mc-shadow-card: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --mc-shadow-card-hover: 0 16px 32px -8px rgba(15, 23, 42, 0.1);
+
+  /* ── Transitions ── */
+  --mc-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --mc-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --mc-transition-fast: 0.15s ease;
+  --mc-transition-smooth: 0.3s var(--mc-ease-out);
+  --mc-transition-bounce: 0.5s var(--mc-ease-bounce);
+
+  /* ── Typography Scale (fluid) ── */
+  --mc-fs-xs: clamp(10px, 0.7vw, 12px);
+  --mc-fs-sm: clamp(12px, 0.85vw, 14px);
+  --mc-fs-base: clamp(14px, 1vw, 16px);
+  --mc-fs-md: clamp(15px, 1.1vw, 18px);
+  --mc-fs-lg: clamp(18px, 1.4vw, 22px);
+  --mc-fs-xl: clamp(22px, 2vw, 28px);
+  --mc-fs-2xl: clamp(26px, 2.5vw, 36px);
+  --mc-fs-3xl: clamp(32px, 3.5vw, 48px);
+  --mc-fs-4xl: clamp(40px, 5vw, 64px);
+  --mc-fs-hero: clamp(36px, 5vw, 72px);
+}
+
+/* ── Scope container ── */
+.mc-scope {
+  font-family: var(--font-body);
+  color: var(--mc-text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
