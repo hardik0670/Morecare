@@ -350,71 +350,47 @@ window.scrollToSection = scrollToSection;
 // ══════════════════════════════════════════════════════════════
 function initReelsSlideshow() {
   const track = document.getElementById('mc-reels-track');
-  const prevBtn = document.getElementById('mc-reels-prev');
-  const nextBtn = document.getElementById('mc-reels-next');
+  if (!track) return;
 
-  if (!track || !prevBtn || !nextBtn) return;
+  const reelsModal = document.getElementById('mc-reels-modal');
+  const reelsVideoContainer = document.getElementById('mc-reels-video-container');
+  const reelsModalCloseBtn = document.getElementById('mc-reels-modal-close-btn');
 
-  let currentOffset = 0;
-  const slides = track.querySelectorAll('.mc-reel-slide');
-  if (slides.length === 0) return;
+  if (!reelsModal || !reelsVideoContainer || !reelsModalCloseBtn) return;
 
-  function getSlideWidth() {
-    const slide = slides[0];
-    const style = getComputedStyle(track);
-    const gap = parseFloat(style.gap) || 16;
-    return slide.offsetWidth + gap;
-  }
+  // Handle click on any reel slide
+  track.addEventListener('click', (e) => {
+    const placeholder = e.target.closest('.mc-reel-placeholder');
+    if (!placeholder) return;
 
-  function getMaxOffset() {
-    const containerWidth = track.parentElement.offsetWidth;
-    const totalWidth = slides.length * getSlideWidth();
-    return Math.max(0, totalWidth - containerWidth);
-  }
+    const videoId = placeholder.dataset.videoId || '9tO5qXvqf-M';
+    
+    // Embed the video in portrait format (autoplay)
+    reelsVideoContainer.innerHTML = `
+      <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1" 
+              title="Morecare Reel Video" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media; picture-in-picture" 
+              allowfullscreen></iframe>
+    `;
 
-  function slide(direction) {
-    const slideWidth = getSlideWidth();
-    const maxOffset = getMaxOffset();
+    // Open the modal
+    reelsModal.classList.add('open');
+  });
 
-    if (direction === 'next') {
-      currentOffset = Math.min(currentOffset + slideWidth, maxOffset);
-    } else {
-      currentOffset = Math.max(currentOffset - slideWidth, 0);
+  // Close modal logic
+  const closeReelsModal = () => {
+    reelsModal.classList.remove('open');
+    // Clear video to stop audio playing
+    reelsVideoContainer.innerHTML = '';
+  };
+
+  reelsModalCloseBtn.addEventListener('click', closeReelsModal);
+  reelsModal.addEventListener('click', (e) => {
+    if (e.target === reelsModal) {
+      closeReelsModal();
     }
-
-    track.style.transform = `translateX(-${currentOffset}px)`;
-  }
-
-  prevBtn.addEventListener('click', () => slide('prev'));
-  nextBtn.addEventListener('click', () => slide('next'));
-
-  // Auto-slide every 4s
-  let autoInterval = setInterval(() => {
-    const maxOffset = getMaxOffset();
-    if (currentOffset >= maxOffset) {
-      currentOffset = 0;
-      track.style.transform = `translateX(0)`;
-    } else {
-      slide('next');
-    }
-  }, 4000);
-
-  // Pause auto on hover
-  const container = document.getElementById('mc-reels-slideshow');
-  if (container) {
-    container.addEventListener('mouseenter', () => clearInterval(autoInterval));
-    container.addEventListener('mouseleave', () => {
-      autoInterval = setInterval(() => {
-        const maxOffset = getMaxOffset();
-        if (currentOffset >= maxOffset) {
-          currentOffset = 0;
-          track.style.transform = `translateX(0)`;
-        } else {
-          slide('next');
-        }
-      }, 4000);
-    });
-  }
+  });
 }
 
 // ── Bootstrapper ──

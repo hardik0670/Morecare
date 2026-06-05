@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>About Us — Morecare Mobility</title>
+  <meta name="description" content="Learn about Morecare's mission to restore physical independence through clinical design and innovative rehabilitation aids.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body class="mc-scope">
+
+  <!-- ========================================================================= 
+       ANNOUNCEMENT BAR
+       ========================================================================= -->
+  <div class="mc-announce-bar">
+    <div class="mc-announce-bar-inner">
+      <div class="mc-announce-slider">
+        <div class="mc-announce-slide active">Free Express Shipping across India on orders above &#8377;4,999!</div>
+        <div class="mc-announce-slide">Summer Sale: Get 10% off with code MORECOMFORT</div>
+        <div class="mc-announce-slide">ISO 13485 Certified &amp; FDA Registered Medical Devices</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= 
+       HEADER & NAVIGATION
+       ============================================================== -->
+  <header class="mc-header">
+    <div class="mc-container mc-header-inner">
+
+      <!-- Hamburger -->
+      <button class="mc-action-btn mc-menu-toggle" id="mc-menu-toggle" aria-label="Open Menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <!-- Logo Image -->
+      <a href="index.html" class="mc-logo-link">
+        <img src="/images/logo.png" alt="Morecare" class="mc-logo-img">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="mc-nav-desktop">
+        <a href="index.html" class="mc-nav-link">Home</a>
+
+        <!-- Mega Category: Products (combines CP Kids & Adults) -->
+        <div class="mc-nav-dropdown-wrapper">
+          <a href="index.html#mc-products-section" class="mc-nav-link">
+            Products
+            <svg class="mc-chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="mc-mega-menu">
+            <div class="mc-mega-menu-grid">
+              <!-- CP Kids Column -->
+              <div class="mc-mega-menu-column">
+                <h4 class="mc-mega-menu-title">Shop for CP Kids</h4>
+                <ul class="mc-mega-menu-list">
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">CP Wheelchairs</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Seating & Posture</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Standing Frames</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Gait Trainers</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Therapy Aids</a></li>
+                </ul>
+              </div>
+              <!-- Adults Column -->
+              <div class="mc-mega-menu-column">
+                <h4 class="mc-mega-menu-title">Shop for Adults</h4>
+                <ul class="mc-mega-menu-list">
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Electric Wheelchairs</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Seat Cushions</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Orthotic Insoles</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Cervical Pillows</a></li>
+                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Walking Aids</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="mc-nav-link active">About Us</a>
+        <a href="contact.html" class="mc-nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="mc-header-actions">
+        <button class="mc-action-btn" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+        <button class="mc-action-btn" aria-label="Account">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="mc-action-btn" id="mc-open-cart" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM20 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="mc-action-badge mc-cart-count-badge" style="display: none;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mc-sidebar-overlay" id="mc-sidebar-overlay"></div>
+  <aside class="mc-mobile-sidebar" id="mc-mobile-sidebar">
+    <div class="mc-mobile-sidebar-header">
+      <a href="index.html"><img src="/images/logo.png" alt="Morecare" class="mc-mobile-sidebar-logo"></a>
+      <button class="mc-action-btn" id="mc-mobile-sidebar-close" aria-label="Close Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mc-mobile-nav">
+      <a href="index.html" class="mc-mobile-nav-link">Home</a>
+
+      <!-- Products Dropdown -->
+      <div class="mc-mobile-dropdown-wrapper">
+        <button class="mc-mobile-dropdown-trigger">
+          Products
+          <svg class="mc-mobile-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mc-mobile-dropdown-content">
+          <div class="mc-mobile-category-group">
+            <span class="mc-mobile-category-title">CP Kids</span>
+            <ul class="mc-mobile-subcategory-list">
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">CP Wheelchairs</a></li>
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Seating &amp; Posture</a></li>
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Standing Frames</a></li>
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Gait Trainers</a></li>
+            </ul>
+          </div>
+          <div class="mc-mobile-category-group">
+            <span class="mc-mobile-category-title">Adults</span>
+            <ul class="mc-mobile-subcategory-list">
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Electric Wheelchairs</a></li>
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Seat Cushions</a></li>
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Orthotic Insoles</a></li>
+              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item">Cervical Pillows</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a href="about.html" class="mc-mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mc-mobile-nav-link">Contact Us</a>
+    </nav>
+    <div style="margin-top: auto;">
+      <a href="tel:+919309888615" class="mc-btn mc-btn-primary" style="width: 100%;">&#128222; Call Support</a>
+    </div>
+  </aside>
+
+  <!-- ==============================================================
+       PAGE HEADER
+       ============================================================== -->
+  <section class="mc-about-hero" style="background: var(--mc-gradient-hero); padding: clamp(40px, 8vw, 80px) 0; text-align: center; border-bottom: 1px solid var(--mc-border-light);">
+    <div class="mc-container">
+      <h1 class="mc-section-title" style="margin-bottom: var(--mc-space-3);">About <span>Morecare</span></h1>
+      <p class="mc-section-desc" style="max-width: 600px;">Restoring independence through clinical engineering and thoughtful design.</p>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       ABOUT US CONTENT
+       ============================================================== -->
+  <section class="mc-about-section" id="mc-about-section" style="background: var(--mc-white); padding: var(--mc-section-py) 0;">
+    <div class="mc-container">
+      <div class="mc-about-grid" style="max-width: 800px; margin: 0 auto;">
+        <div class="mc-about-content">
+          <p style="font-size: var(--mc-fs-md); line-height: 1.8; color: var(--mc-text-body); margin-bottom: 24px;">Morecare is dedicated to restoring physical independence through clinical design, innovative air-cell systems, and carbon fiber technology &ndash; for CP kids and adults alike.</p>
+          <p style="font-size: var(--mc-fs-base); line-height: 1.7; color: var(--mc-text-muted); margin-bottom: 32px;">Founded with the mission to make world-class mobility and rehabilitation solutions accessible across India, we combine cutting-edge engineering with deep clinical expertise. We believe that physical independence is a fundamental human right, and every product we design is optimized to empower mobility and ensure therapeutic posture support.</p>
+          
+          <div class="mc-about-stats" style="display: flex; gap: var(--mc-space-8); margin-top: 40px; border-top: 1.5px solid var(--mc-border-light); padding-top: 32px;">
+            <div class="mc-about-stat" style="display: flex; flex-direction: column;">
+              <strong style="font-size: clamp(24px, 4vw, 36px); font-weight: 800; color: var(--mc-primary);">10,000+</strong>
+              <span style="font-size: 13px; color: var(--mc-text-muted); font-weight: 600;">Families Served</span>
+            </div>
+            <div class="mc-about-stat" style="display: flex; flex-direction: column;">
+              <strong style="font-size: clamp(24px, 4vw, 36px); font-weight: 800; color: var(--mc-primary);">ISO 13485</strong>
+              <span style="font-size: 13px; color: var(--mc-text-muted); font-weight: 600;">Certified</span>
+            </div>
+            <div class="mc-about-stat" style="display: flex; flex-direction: column;">
+              <strong style="font-size: clamp(24px, 4vw, 36px); font-weight: 800; color: var(--mc-primary);">FDA</strong>
+              <span style="font-size: 13px; color: var(--mc-text-muted); font-weight: 600;">Registered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       FOOTER
+       ============================================================== -->
+  <footer class="mc-footer">
+    <div class="mc-container">
+      <div class="mc-footer-top">
+        <div class="mc-footer-brand">
+          <a href="index.html"><img src="/images/logo.png" alt="Morecare" class="mc-footer-logo"></a>
+          <p class="mc-footer-about">Morecare is dedicated to restoring physical independence through clinical design, innovative air-cell systems, and carbon fiber technology &ndash; for CP kids and adults alike.</p>
+          <div class="mc-footer-socials">
+            <a href="https://www.facebook.com/morecare.mobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-3H14V8c0-.7.3-1.5 1.5-1.5H17V3.8c-.3-.04-1.3-.12-2.5-.12C12 3.68 10 5.12 10 8v2.5H7.5v3H10V21h4v-7.5z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/morecare.mobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@morecare.mobility" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn youtube" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51C1.228 4.39 1.1 5.4 1.1 5.4s-.2 1.637-.2 3.275v2.65c0 1.637.2 3.275.2 3.275s.128 1.01.912 1.227c1.863.51 9.388.51 9.388.51s7.524 0 9.388-.51a3.004 3.004 0 0 0 2.11-2.108c.51-1.863.51-9.388.51-9.388s0-7.525-.51-9.388z" fill="#fff"/><polygon points="9.545,8.432 9.545,15.568 15.818,12" fill="#FF0000"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/morecaremobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn linkedin" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="mc-footer-title">CP Kids</h3>
+          <div class="mc-footer-links">
+            <a href="index.html#mc-products-section" class="mc-footer-link">CP Wheelchairs</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Seating & Posture</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Standing Frames</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Gait Trainers</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Therapy Aids</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="mc-footer-title">Adults</h3>
+          <div class="mc-footer-links">
+            <a href="index.html#mc-products-section" class="mc-footer-link">Electric Wheelchairs</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Seat Cushions</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Orthotic Insoles</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Cervical Pillows</a>
+            <a href="index.html#mc-products-section" class="mc-footer-link">Walking Aids</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="mc-footer-title">Support</h3>
+          <div class="mc-footer-links">
+            <a href="index.html#mc-quiz-section" class="mc-footer-link">Fit Finder Quiz</a>
+            <a href="index.html#mc-faq-section" class="mc-footer-link">FAQs</a>
+            <a href="#" class="mc-footer-link">Warranty Info</a>
+            <a href="#" class="mc-footer-link">Customer Care</a>
+            <a href="#" class="mc-footer-link">Become a Distributor</a>
+          </div>
+        </div>
+      </div>
+      <div class="mc-footer-bottom">
+        <span class="mc-footer-copyright">&copy; 2026 Morecare Mobility Private Limited. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================================
+       CART DRAWER
+       ============================================================== -->
+  <div class="mc-cart-overlay" id="mc-cart-overlay"></div>
+  <div class="mc-cart-drawer" id="mc-cart-drawer">
+    <div class="mc-cart-header">
+      <h2 class="mc-cart-title">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Your Cart (<span class="mc-cart-count-badge">0</span>)
+      </h2>
+      <button class="mc-cart-close" id="mc-close-cart" aria-label="Close Cart">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mc-cart-shipping-bar">
+      <div class="mc-shipping-bar-text" id="mc-shipping-bar-text">Add <span>&#8377;4,999</span> more for <strong>FREE shipping</strong></div>
+      <div class="mc-shipping-progress"><div class="mc-shipping-progress-fill" id="mc-shipping-progress-fill"></div></div>
+    </div>
+    <div class="mc-cart-items" id="mc-cart-items"></div>
+    <div class="mc-cart-footer">
+      <div class="mc-cart-subtotal"><span>Subtotal</span><span id="mc-cart-subtotal-val">&#8377;0</span></div>
+      <button class="mc-btn mc-btn-accent mc-cart-checkout-btn" onclick="alert('Proceeding to checkout!')">Proceed to Checkout</button>
+      <div style="text-align: center; font-size: 11px; color: var(--mc-text-light);">&#128274; Secure 256-bit SSL checkout</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

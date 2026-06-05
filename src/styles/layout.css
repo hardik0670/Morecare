@@ -22,7 +22,10 @@
   position: relative;
   z-index: 100;
   overflow: hidden;
-  width: 100%;
+  width: min(600px, 90%);
+  margin: 10px auto 0;
+  border-radius: var(--mc-radius-full);
+  box-shadow: var(--mc-shadow-sm);
 }
 
 .mc-announce-bar-inner {
@@ -691,9 +694,8 @@
 }
 
 /* ── 6. FOOTER ── */
-/* ── 6. FOOTER ── */
 .mc-footer {
-  background: linear-gradient(to top, rgba(20, 118, 175, 0.22) 0%, rgba(9, 168, 242, 0.04) 50%, var(--mc-bg) 100%);
+  background: linear-gradient(to top, rgba(10, 77, 115, 0.42) 0%, rgba(20, 118, 175, 0.15) 50%, var(--mc-bg) 100%);
   color: var(--mc-text-body);
   padding: var(--mc-section-py) 0 0;
   width: 100%;
