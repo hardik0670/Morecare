@@ -695,7 +695,7 @@
 
 /* ── 6. FOOTER ── */
 .mc-footer {
-  background: linear-gradient(to top, rgba(10, 77, 115, 0.42) 0%, rgba(20, 118, 175, 0.15) 50%, var(--mc-bg) 100%);
+  background: linear-gradient(to top, rgba(14, 91, 137, 0.36) 0%, rgba(20, 118, 175, 0.08) 65%, var(--mc-bg) 100%);
   color: var(--mc-text-body);
   padding: var(--mc-section-py) 0 0;
   width: 100%;
@@ -725,7 +725,8 @@
   font-size: var(--mc-fs-sm);
   line-height: 1.7;
   max-width: 360px;
-  color: var(--mc-text-muted);
+  color: var(--mc-text-body);
+  opacity: 0.85;
 }
 
 .mc-footer-socials {
@@ -784,12 +785,14 @@
 
 .mc-footer-link {
   font-size: var(--mc-fs-sm);
-  color: var(--mc-text-muted);
-  transition: color var(--mc-transition-fast), transform var(--mc-transition-fast);
+  color: var(--mc-text-body);
+  opacity: 0.8;
+  transition: color var(--mc-transition-fast), transform var(--mc-transition-fast), opacity var(--mc-transition-fast);
 }
 
 .mc-footer-link:hover {
   color: var(--mc-primary);
+  opacity: 1;
   transform: translateX(3px);
 }
 
@@ -813,7 +816,8 @@
 
 .mc-footer-copyright {
   font-size: 12px;
-  color: var(--mc-text-muted);
+  color: var(--mc-text-body);
+  opacity: 0.75;
   font-weight: 500;
 }
 

@@ -241,10 +241,10 @@
   position: absolute;
   top: 50%;
   left: 60%; /* Shift video focus to the right */
-  width: 100vw;
-  height: 56.25vw; /* 16:9 aspect ratio (9/16 = 0.5625) */
+  width: 120vw;
+  height: 67.5vw; /* 16:9 aspect ratio (120 * 9/16 = 67.5) */
   min-height: 100%;
-  min-width: 177.77vh; /* 16:9 aspect ratio (16/9 = 1.7777) */
+  min-width: 213.33vh; /* 16:9 aspect ratio (1.2 * 177.77 = 213.33) */
   transform: translate(-50%, -50%);
   border: none;
   pointer-events: none;
@@ -1618,6 +1618,29 @@
   .mc-trust-strip-inner::-webkit-scrollbar { display: none; }
   .mc-reviews-row {
     grid-template-columns: 1fr;
+  }
+  
+  /* Responsive Video Hero Overrides */
+  .mc-hero-video-layout .mc-hero-content {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .mc-hero-badges-row {
+    justify-content: center;
+  }
+  .mc-hero-title-big {
+    text-align: center;
+  }
+  .mc-hero-video-layout .mc-hero-actions {
+    justify-content: center;
+  }
+  .mc-hero-video-bg iframe {
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100%;
+    min-width: 177.77vh;
   }
 }
 
