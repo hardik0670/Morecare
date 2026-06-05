@@ -8,7 +8,6 @@ import { PRODUCTS, MEGA_CATEGORIES, SUB_CATEGORIES } from './utils/products.js';
 import { initCart, addToCart } from './components/layout/cart.js';
 import { initSidebar } from './components/layout/sidebar.js';
 import { initHeroSlider } from './components/sections/slider.js';
-import { initHotspots } from './components/sections/hotspots.js';
 import { initQuiz } from './components/sections/quiz.js';
 import { initFaqs } from './components/sections/faq.js';
 import { initQuickView, openQuickView } from './components/product/quickview.js';
@@ -38,7 +37,6 @@ function init() {
   initCart();
   initSidebar();
   initHeroSlider();
-  initHotspots();
   initQuiz();
   initFaqs();
   initQuickView();

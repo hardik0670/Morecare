@@ -268,7 +268,7 @@
   z-index: 3;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: clamp(420px, 55vw, 580px);
   padding-top: clamp(24px, 4vw, 48px);
   padding-bottom: var(--mc-space-16);
@@ -276,18 +276,18 @@
 
 .mc-hero-video-layout .mc-hero-content {
   max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* "Made in India" + "Trusted Worldwide." badges */
 .mc-hero-badges-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
   margin-bottom: var(--mc-space-6);
 }
@@ -334,11 +334,11 @@
   color: var(--mc-text-main);
   letter-spacing: -0.03em;
   margin-bottom: var(--mc-space-6);
-  text-align: center;
+  text-align: left;
 }
 
 .mc-hero-video-layout .mc-hero-actions {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* Ghost button for "Book a Consultation" */
@@ -439,7 +439,7 @@
 
 /* Trust Strip V2 (with subtitles) */
 .mc-trust-strip-v2 {
-  background: var(--mc-primary);
+  background: transparent;
   padding: var(--mc-space-6) 0;
 }
 
@@ -453,19 +453,19 @@
   align-items: center;
   gap: 14px;
   color: var(--mc-white);
-  background: rgba(194, 223, 7, 0.08);
-  border: 1px solid rgba(194, 223, 7, 0.25);
+  background: rgba(15, 30, 54, 0.88);
+  border: 1px solid rgba(194, 223, 7, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 10px 24px;
   border-radius: var(--mc-radius-full);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.15);
   transition: all 0.3s ease;
 }
 
 .mc-trust-item-v2:hover {
-  background: rgba(194, 223, 7, 0.15);
-  border-color: rgba(194, 223, 7, 0.55);
+  background: rgba(15, 30, 54, 0.95);
+  border-color: rgba(194, 223, 7, 0.6);
   transform: translateY(-2px);
 }
 
