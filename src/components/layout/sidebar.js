@@ -21,6 +21,7 @@ function openSidebar() {
   }
   if (DOM.sidebarOverlay) DOM.sidebarOverlay.classList.add('active');
   if (DOM.mobileSidebarClose) DOM.mobileSidebarClose.focus();
+  document.body.classList.add('mobile-sidebar-open');
 }
 
 function closeSidebar() {
@@ -29,6 +30,7 @@ function closeSidebar() {
     DOM.mobileSidebar.setAttribute('aria-hidden', 'true');
   }
   if (DOM.sidebarOverlay) DOM.sidebarOverlay.classList.remove('active');
+  document.body.classList.remove('mobile-sidebar-open');
 
   // Reset all mobile dropdowns
   document.querySelectorAll('.mc-mobile-dropdown-wrapper.open').forEach(w => {

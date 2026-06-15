@@ -1,30 +1,6 @@
 /* ==========================================================================
    PRODUCTS CATALOG DATA — 25 SKUs
-   Organized under two mega-categories: CP Kids & Adults
    ========================================================================== */
-
-export const MEGA_CATEGORIES = [
-  { id: 'all', label: 'All Products' },
-  { id: 'cp-kids', label: 'Shop for CP Kids' },
-  { id: 'adults', label: 'Shop for Adults' }
-];
-
-export const SUB_CATEGORIES = {
-  'cp-kids': [
-    { id: 'cp-wheelchair', label: 'CP Wheelchairs' },
-    { id: 'cp-seating', label: 'CP Seating & Posture' },
-    { id: 'cp-orthotics', label: 'CP Orthotics' },
-    { id: 'cp-mobility', label: 'CP Mobility Aids' },
-    { id: 'cp-therapy', label: 'CP Therapy & Support' }
-  ],
-  'adults': [
-    { id: 'wheelchair', label: 'Wheelchairs' },
-    { id: 'cushion', label: 'Seat Cushions' },
-    { id: 'insoles', label: 'Foot Insoles' },
-    { id: 'pillow', label: 'Neck & Sleep' },
-    { id: 'walking', label: 'Walking Aids' }
-  ]
-};
 
 export const PRODUCTS = [
   /* ===================================================================
@@ -33,6 +9,7 @@ export const PRODUCTS = [
   {
     id: 'MC-CPW01',
     title: 'Morecare CP Pediatric Power Wheelchair',
+    bestSeller: true,
     megaCategory: 'cp-kids',
     category: 'cp-wheelchair',
     categoryLabel: 'CP Wheelchairs',
@@ -48,6 +25,7 @@ export const PRODUCTS = [
   {
     id: 'MC-CPW02',
     title: 'Morecare CP Tilt-in-Space Manual Chair',
+    bestSeller: true,
     megaCategory: 'cp-kids',
     category: 'cp-wheelchair',
     categoryLabel: 'CP Wheelchairs',
@@ -78,6 +56,7 @@ export const PRODUCTS = [
   {
     id: 'MC-CPO01',
     title: 'Morecare CP Ankle-Foot Orthotic Insoles',
+    bestSeller: true,
     megaCategory: 'cp-kids',
     category: 'cp-orthotics',
     categoryLabel: 'CP Orthotics',
@@ -93,6 +72,7 @@ export const PRODUCTS = [
   {
     id: 'MC-CPM01',
     title: 'Morecare CP Standing Frame',
+    bestSeller: true,
     megaCategory: 'cp-kids',
     category: 'cp-mobility',
     categoryLabel: 'CP Mobility Aids',
@@ -138,6 +118,7 @@ export const PRODUCTS = [
   {
     id: 'MC-CPS02',
     title: 'Morecare CP Adaptive Feeding Seat',
+    bestSeller: true,
     megaCategory: 'cp-kids',
     category: 'cp-seating',
     categoryLabel: 'CP Seating & Posture',
@@ -198,6 +179,7 @@ export const PRODUCTS = [
   {
     id: 'MC-CPT03',
     title: 'Morecare CP Therapy Activity Mat',
+    bestSeller: true,
     megaCategory: 'cp-kids',
     category: 'cp-therapy',
     categoryLabel: 'CP Therapy & Support',
@@ -217,6 +199,7 @@ export const PRODUCTS = [
   {
     id: 'MC-W01',
     title: 'Morecare Carbon X Electric Wheelchair',
+    bestSeller: true,
     megaCategory: 'adults',
     category: 'wheelchair',
     categoryLabel: 'Electric Wheelchairs',
@@ -262,6 +245,7 @@ export const PRODUCTS = [
   {
     id: 'MC-C01',
     title: 'Morecare Ergo-Air Seat Cushion',
+    bestSeller: true,
     megaCategory: 'adults',
     category: 'cushion',
     categoryLabel: 'Comfort Cushions',
@@ -322,6 +306,7 @@ export const PRODUCTS = [
   {
     id: 'MC-I02',
     title: 'Morecare Arch-Active Sports Insoles',
+    bestSeller: true,
     megaCategory: 'adults',
     category: 'insoles',
     categoryLabel: 'Foot Wellness',
@@ -337,6 +322,7 @@ export const PRODUCTS = [
   {
     id: 'MC-I03',
     title: 'Morecare Plantar Fasciitis Gel Insoles',
+    bestSeller: true,
     megaCategory: 'adults',
     category: 'insoles',
     categoryLabel: 'Foot Wellness',
@@ -352,6 +338,7 @@ export const PRODUCTS = [
   {
     id: 'MC-P01',
     title: 'Morecare Contoured Cervical Pillow',
+    bestSeller: true,
     megaCategory: 'adults',
     category: 'pillow',
     categoryLabel: 'Neck & Sleep',

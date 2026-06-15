@@ -1,301 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Morecare Ergo-Air Seat Cushion — Premium Tailbone Pain Relief</title>
-  <!-- Google Fonts loaded directly -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>Morecare — Product Details</title>
+  <meta name="description" content="Shop premium mobility and rehabilitation products from Morecare. Medical-grade quality with warranty.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Morecare — Product Details">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="src/styles/main.css">
 </head>
+
 <body class="mc-scope">
 
-  <!-- ==========================================================================
-       ANNOUNCEMENT BAR
-       ========================================================================== -->
-  <div class="mc-announce-bar">
-    <div class="mc-announce-bar-inner">
-      <div class="mc-announce-slider">
-        <div class="mc-announce-slide active">🚚 Free Express Shipping across India on orders above ₹4,999!</div>
-        <div class="mc-announce-slide">⚡ Summer Ergonomics Sale: Get 10% off with code: MORECOMFORT</div>
-        <div class="mc-announce-slide">🏥 ISO 13485 Certified & FDA Registered Medical Devices</div>
-      </div>
-    </div>
-  </div>
+  <load src="./components/announce-bar.html" />
 
   <!-- ==========================================================================
        HEADER & NAVIGATION
        ========================================================================== -->
-  <header class="mc-header">
-    <div class="mc-container mc-header-inner">
-      
-      <!-- Hamburger Toggle for Mobile -->
-      <button class="mc-action-btn mc-menu-toggle" id="mc-menu-toggle" aria-label="Open Menu">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+  <load src="./components/header.html" productsClass="active" />
 
-      <!-- Logo -->
-      <a href="index.html" class="mc-logo-container">
-        <div class="mc-logo-text">
-          <span class="mc-logo-more">more</span><span class="mc-logo-care">care</span>
-        </div>
-        <div class="mc-logo-tagline">Mobility & Rehabilitation Solutions</div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="mc-nav-desktop">
-        <a href="index.html" class="mc-nav-link">Home</a>
-        <div class="mc-nav-dropdown-wrapper">
-          <a href="index.html#mc-products-section" class="mc-nav-link active">
-            Products
-            <svg class="mc-chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <div class="mc-mega-menu">
-            <div class="mc-mega-menu-grid">
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Shop for CP Kids</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">CP Wheelchairs</a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Seating & Posture</a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Standing Frames</a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Therapy Aids</a></li>
-                </ul>
-              </div>
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Shop for Adults</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Electric Wheelchairs</a></li>
-                  <li><a href="product.html" class="mc-mega-menu-item">Seat Cushions</a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Orthotic Insoles</a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Cervical Pillows</a></li>
-                  <li><a href="index.html#mc-products-section" class="mc-mega-menu-item">Walking Aids</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="about.html" class="mc-nav-link">About Us</a>
-        <a href="contact.html" class="mc-nav-link">Contact Us</a>
-      </nav>
-
-      <!-- Header Action Icons -->
-      <div class="mc-header-actions">
-        <button class="mc-action-btn" aria-label="Search Products">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-        </button>
-        <button class="mc-action-btn" aria-label="Account Profile">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </button>
-        <button class="mc-action-btn" id="mc-open-cart" aria-label="Open Shopping Cart">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM20 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          <span class="mc-action-badge mc-cart-count-badge" style="display: none;">0</span>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile Sidebar Menu -->
-  <div class="mc-sidebar-overlay" id="mc-sidebar-overlay"></div>
-  <aside class="mc-mobile-sidebar" id="mc-mobile-sidebar">
-    <div class="mc-mobile-sidebar-header">
-      <a href="index.html" class="mc-logo-container">
-        <div class="mc-logo-text">
-          <span class="mc-logo-more">more</span><span class="mc-logo-care">care</span>
-        </div>
-        <div class="mc-logo-tagline">Mobility & Rehabilitation Solutions</div>
-      </a>
-      <button class="mc-action-btn" id="mc-mobile-sidebar-close" aria-label="Close Menu">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <nav class="mc-mobile-nav">
-      <a href="index.html" class="mc-mobile-nav-link">Home</a>
-      <div class="mc-mobile-dropdown-wrapper">
-        <button class="mc-mobile-nav-link mc-mobile-dropdown-trigger">
-          Products
-          <svg class="mc-mobile-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="mc-mobile-dropdown-content">
-          <!-- Category 1 -->
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">Electric Wheelchairs</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Carbon X Power Chair <span class="mc-sku-tag active">Active</span></a></li>
-              <li><span class="mc-mobile-menu-item disabled">Transit Lite Power <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Heavy-Duty Power <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Fold-n-Go Travel <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Off-Road All-Terrain <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-            </ul>
-          </div>
-          <!-- Category 2 -->
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">Manual Wheelchairs</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Transit Lite Manual <span class="mc-sku-tag active">Active</span></a></li>
-              <li><span class="mc-mobile-menu-item disabled">Ergo-Active Comfort <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Lightweight Travel <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Reclining Rehab <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Patient Mover Lite <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-            </ul>
-          </div>
-          <!-- Category 3 -->
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">Seat Cushions</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="product.html" class="mc-mobile-menu-item">Ergo-Air Cushion <span class="mc-sku-tag active">Active</span></a></li>
-              <li><span class="mc-mobile-menu-item disabled">Memory Foam Coccyx <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Cool-Gel Orthopedic <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Honeycomb Relief Pad <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Lumbar Support Back <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-            </ul>
-          </div>
-          <!-- Category 4 -->
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">Foot Insoles</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Cloud-Gel Orthotics <span class="mc-sku-tag active">Active</span></a></li>
-              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Arch-Active Sports <span class="mc-sku-tag active">Active</span></a></li>
-              <li><span class="mc-mobile-menu-item disabled">Plantar Fasciitis Gel <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Diabetic Comfort <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Heel Pain Cups <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-            </ul>
-          </div>
-          <!-- Category 5 -->
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">Neck & Sleep</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="index.html#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Contoured Cervical <span class="mc-sku-tag active">Active</span></a></li>
-              <li><span class="mc-mobile-menu-item disabled">Travel Memory Neck <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Orthopedic Knee <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Bed Wedge Elevation <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-              <li><span class="mc-mobile-menu-item disabled">Full Body Sleep <span class="mc-sku-tag temp">Temp SKU</span></span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <a href="index.html#mc-quiz-section" class="mc-mobile-nav-link" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Fit Finder</a>
-      <a href="product.html" class="mc-mobile-nav-link">Cushion Page</a>
-      <a href="index.html#mc-faq-section" class="mc-mobile-nav-link" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Help & FAQs</a>
-    </nav>
-    <div style="margin-top: auto;">
-      <a href="tel:+919309888615" class="mc-btn mc-btn-primary" style="width: 100%;">
-        📞 Call Support
-      </a>
-    </div>
-  </aside>
+  <load src="./components/mobile-sidebar.html" />
 
   <!-- ==========================================================================
        PRODUCT DETAIL CONTENT
        ========================================================================== -->
-  <main class="mc-container" style="padding-top: 40px; padding-bottom: 60px;">
-    
-    <!-- Breadcrumbs -->
-    <div style="font-size: 13px; color: var(--mc-text-muted); margin-bottom: 24px;">
-      <a href="index.html" style="hover: color: var(--mc-accent);">Home</a> &nbsp;/&nbsp; 
-      <a href="index.html#mc-products-section">Comfort Cushions</a> &nbsp;/&nbsp; 
-      <span style="color: var(--mc-primary); font-weight: 600;">Ergo-Air Seat Cushion</span>
-    </div>
+  <main class="mc-container" id="mc-pdp-main" style="padding-top: 40px; padding-bottom: 60px;">
+
+    <!-- Breadcrumbs (populated dynamically) -->
+    <nav class="mc-breadcrumbs" id="mc-breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="mc-breadcrumb-sep">/</span>
+      <a href="adults.html" id="mc-breadcrumb-cat">Products</a>
+      <span class="mc-breadcrumb-sep">/</span>
+      <span class="mc-breadcrumb-current" id="mc-breadcrumb-current">Product</span>
+    </nav>
 
     <!-- Product Grid -->
     <div class="mc-product-page-grid">
-      
+
       <!-- Gallery Column -->
       <div class="mc-gallery-wrapper mc-reveal">
-        <div class="mc-gallery-main">
+        <div class="mc-gallery-main" id="mc-gallery-main">
           <div id="mc-main-gallery-svg">
-            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
-              <rect x="22" y="22" width="56" height="56" rx="10" stroke="var(--mc-accent)" stroke-width="3.5" fill="var(--mc-accent)" fill-opacity="0.05"/>
-              <circle cx="34" cy="34" r="5" fill="var(--mc-accent)"/>
-              <circle cx="50" cy="34" r="5" fill="var(--mc-accent)"/>
-              <circle cx="66" cy="34" r="5" fill="var(--mc-accent)"/>
-              <circle cx="34" cy="50" r="5" fill="var(--mc-accent)"/>
-              <circle cx="50" cy="50" r="6" stroke="var(--mc-accent)" stroke-width="2"/>
-              <circle cx="66" cy="50" r="5" fill="var(--mc-accent)"/>
-              <circle cx="34" cy="66" r="5" fill="var(--mc-accent)"/>
-              <circle cx="50" cy="66" r="5" fill="var(--mc-accent)"/>
-              <circle cx="66" cy="66" r="5" fill="var(--mc-accent)"/>
-            </svg>
+            <!-- Populated by JS -->
           </div>
         </div>
-        <div class="mc-gallery-thumbs">
-          <div class="mc-gallery-thumb active">
-            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="25" y="25" width="50" height="50" rx="8" stroke="currentColor" fill="currentColor" fill-opacity="0.05"/>
-              <circle cx="50" cy="50" r="6" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
-          <div class="mc-gallery-thumb">
-            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="20" y="20" width="60" height="60" rx="6" stroke="currentColor" stroke-dasharray="2 2"/>
-              <path d="M30 40h40M30 60h40" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="mc-gallery-thumb">
-            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="50" cy="50" r="24" stroke="currentColor" stroke-width="3"/>
-              <path d="M50 26v48M26 50h48" stroke-linecap="round"/>
-            </svg>
-          </div>
+        <div class="mc-gallery-thumbs" id="mc-gallery-thumbs">
+          <!-- Populated by JS -->
         </div>
       </div>
 
       <!-- Info Column -->
       <div class="mc-prod-detail-info mc-reveal delay-100">
-        <span class="mc-modal-meta">Comfort Cushions</span>
-        <h1 class="mc-modal-title" style="font-size: 32px; margin-bottom: 8px;">Morecare Ergo-Air Seat Cushion</h1>
-        
-        <div class="mc-modal-rating" style="margin-bottom: 20px;">
-          ★ 4.8 <span style="color: var(--mc-text-muted); font-weight: 500; margin-left: 6px;">(342 Verified Customer Reviews)</span>
+        <!-- Best Seller Badge -->
+        <div class="mc-pdp-badges" id="mc-pdp-badges"></div>
+
+        <span class="mc-modal-meta" id="mc-pdp-category">Category</span>
+        <h1 class="mc-pdp-title" id="mc-pdp-title">Product Title</h1>
+
+        <div class="mc-pdp-price-group" id="mc-pdp-price-group">
+          <span class="mc-price-old" id="mc-pdp-price-old"></span>
+          <span class="mc-price-new mc-pdp-price" id="mc-pdp-price">₹0</span>
+          <span class="mc-pdp-discount" id="mc-pdp-discount"></span>
         </div>
 
-        <div class="mc-price-group" style="margin-bottom: 24px;">
-          <span class="mc-price-old" style="font-size: 14px;">₹5,999</span>
-          <span class="mc-price-new" style="font-size: 32px; color: var(--mc-accent);">₹4,999</span>
-          <span style="font-size: 12px; color: var(--mc-teal); font-weight: 700; margin-top: 4px;">🎉 Save ₹1,000 (17% OFF)</span>
+        <p class="mc-pdp-desc" id="mc-pdp-desc">Description</p>
+
+        <!-- Product Features Grid -->
+        <div class="mc-pdp-features" id="mc-pdp-features">
+          <!-- Populated by JS -->
         </div>
-
-        <p class="mc-modal-desc" style="font-size: 15px; margin-bottom: 28px;">
-          Designed by senior physical therapists to erase coccyx pressure, back spasms, and pelvic pain. Features 36 interconnected inflatable cells that dynamically contour to your sitting weight.
-        </p>
-
-        <!-- Product highlights list -->
-        <ul style="list-style: none; margin-bottom: 30px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--mc-text-main);">
-          <li style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="none" stroke="var(--mc-teal)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 🩺 Medical-grade PVC core for ultimate durability</li>
-          <li style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="none" stroke="var(--mc-teal)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 🎈 Includes custom valve & high-pressure hand pump</li>
-          <li style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="none" stroke="var(--mc-teal)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 🌬️ Breathable cooling-mesh washable cover</li>
-          <li style="display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="none" stroke="var(--mc-teal)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 🚗 Ideal for office chairs, car leather seats, and wheelchairs</li>
-        </ul>
 
         <!-- Sizing options -->
-        <div class="mc-option-group">
-          <span class="mc-option-label">Select Cushion Size</span>
-          <div class="mc-size-options">
-            <button class="mc-size-btn mc-prod-size-btn selected">Standard (18" x 16")</button>
-            <button class="mc-size-btn mc-prod-size-btn">Compact (16" x 16")</button>
+        <div class="mc-option-group" id="mc-pdp-size-group">
+          <span class="mc-option-label">Select Size</span>
+          <div class="mc-size-options" id="mc-pdp-sizes">
+            <!-- Populated by JS -->
           </div>
         </div>
 
         <!-- Add to cart row -->
-        <div style="display: flex; gap: 16px; align-items: center; margin-top: 8px;">
-          <div class="mc-qty-selector" style="height: 46px; padding: 0 4px;">
-            <button class="mc-qty-btn" id="mc-prod-qty-minus">-</button>
-            <input type="text" class="mc-qty-input" id="mc-prod-qty" value="1" style="font-size: 15px;">
-            <button class="mc-qty-btn" id="mc-prod-qty-plus">+</button>
+        <div class="mc-pdp-add-row">
+          <div class="mc-qty-selector mc-qty-selector-lg">
+            <button class="mc-qty-btn" id="mc-prod-qty-minus" aria-label="Decrease quantity">−</button>
+            <input type="text" class="mc-qty-input" id="mc-prod-qty" value="1" readonly aria-label="Quantity">
+            <button class="mc-qty-btn" id="mc-prod-qty-plus" aria-label="Increase quantity">+</button>
           </div>
-          <button class="mc-btn mc-btn-accent mc-modal-add-btn" id="mc-prod-add-btn" data-id="MC-C01" style="height: 46px; font-size: 15px;">
-            Add to Shopping Cart
+          <button class="mc-btn mc-btn-accent mc-pdp-add-btn" id="mc-prod-add-btn">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
           </button>
         </div>
 
         <!-- Trust strips -->
         <div class="mc-badge-strip">
-          <div class="mc-badge-item">🛡️ 1 Year Warranty</div>
-          <div class="mc-badge-item">🔄 30 Day Free Trial</div>
-          <div class="mc-badge-item">🔒 Secure Checkout</div>
-          <div class="mc-badge-item">⭐ FDA Registered</div>
+          <div class="mc-badge-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            1 Year Warranty
+          </div>
+          <div class="mc-badge-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            30 Day Free Trial
+          </div>
+          <div class="mc-badge-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Checkout
+          </div>
+          <div class="mc-badge-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            FDA Registered
+          </div>
         </div>
 
       </div>
@@ -303,226 +125,76 @@
     </div>
 
     <!-- Product specification tabs -->
-    <div class="mc-product-tabs mc-reveal delay-200">
-      <button class="mc-product-tab active" data-tab="desc">Product Description</button>
-      <button class="mc-product-tab" data-tab="specs">Specifications</button>
-      <button class="mc-product-tab" data-tab="care">Care & Usage</button>
+    <div class="mc-product-tabs mc-reveal delay-200" id="mc-product-tabs">
+      <div class="mc-product-tabs-track">
+        <button class="mc-product-tab active" data-tab="desc">Product Description</button>
+        <button class="mc-product-tab" data-tab="specs">Specifications</button>
+        <button class="mc-product-tab" data-tab="care">Care & Usage</button>
+        <div class="mc-tab-indicator" id="mc-tab-indicator"></div>
+      </div>
     </div>
 
     <!-- Tab 1: Description -->
     <div class="mc-product-tab-content active" id="mc-tab-desc">
-      <div style="max-width: 800px; font-size: 15px; color: var(--mc-text-muted); line-height: 1.8;">
-        <p style="margin-bottom: 16px;">The <strong>Morecare Ergo-Air Seat Cushion</strong> represents the peak of ergonomic seating. Unlike solid foam or gel pads which bottom out under body weight, our cushion utilizes interconnected air-cell columns. When you sit, air flows from cell to cell to match your unique pelvic bone structure, distributing load vectors evenly and preventing points of concentrated stress.</p>
-        <p style="margin-bottom: 16px;">This clinical weight distribution decreases tailbone fatigue, allows vascular blood flow to remain unobstructed, and limits compression of the sciatic nerve. It is highly recommended for office professionals, long-distance drivers, post-op tailbone surgery patients, and full-time wheelchair users.</p>
+      <div class="mc-tab-content-inner" id="mc-tab-desc-content">
+        <!-- Populated by JS -->
       </div>
     </div>
 
     <!-- Tab 2: Specifications -->
     <div class="mc-product-tab-content" id="mc-tab-specs">
-      <div style="max-width: 600px;">
-        <table class="mc-specs-table">
-          <tr>
-            <td class="mc-specs-label">Dimensions</td>
-            <td class="mc-specs-value">18 x 16 x 2.2 inches (Standard) / 16 x 16 x 2.2 inches (Compact)</td>
-          </tr>
-          <tr>
-            <td class="mc-specs-label">Material Core</td>
-            <td class="mc-specs-value">High-grade medical PVC (heat-sealed, hypoallergenic)</td>
-          </tr>
-          <tr>
-            <td class="mc-specs-label">Cover fabric</td>
-            <td class="mc-specs-value">Cool-Mesh Breathable Polyester with Silicone anti-slip base</td>
-          </tr>
-          <tr>
-            <td class="mc-specs-label">Max Load Capacity</td>
-            <td class="mc-specs-value">Up to 150 kg (330 lbs)</td>
-          </tr>
-          <tr>
-            <td class="mc-specs-label">Inflation Style</td>
-            <td class="mc-specs-value">Manual micro-valve with double-action pump (included)</td>
-          </tr>
-          <tr>
-            <td class="mc-specs-label">Warranty</td>
-            <td class="mc-specs-value">1 Year limited manufacturer warranty against air leaks</td>
-          </tr>
+      <div class="mc-tab-content-inner">
+        <table class="mc-specs-table" id="mc-specs-table">
+          <!-- Populated by JS -->
         </table>
       </div>
     </div>
 
     <!-- Tab 3: Care & Maintenance -->
     <div class="mc-product-tab-content" id="mc-tab-care">
-      <div style="max-width: 800px; font-size: 15px; color: var(--mc-text-muted); line-height: 1.8;">
-        <h4 style="color: var(--mc-primary); margin-bottom: 10px; font-size: 16px;">How to Inflate & Adjust:</h4>
-        <ol style="margin-left: 20px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px;">
-          <li>Twist the brass valve counter-clockwise to open the seal.</li>
-          <li>Attach the rubber nozzle of the included pump to the valve.</li>
-          <li>Pump air until the cushion is fully expanded (around 20 pumps). We recommend inflating to 70% capacity rather than 100% stiffness for the best contour immersion.</li>
-          <li>Close the valve tightly by twisting clockwise. Sit down; if you feel the seat bottom below, open the valve slightly, add 3-5 pumps of air, and close.</li>
+      <div class="mc-tab-content-inner" id="mc-tab-care-content">
+        <h4 class="mc-tab-subtitle">Inflation & Adjustment</h4>
+        <ol class="mc-tab-list">
+          <li>Adjust or inflate as per product instructions included in the box.</li>
+          <li>For cushion products: inflate to 70% capacity for optimal contour support.</li>
+          <li>For pillows: allow 24-48 hours for memory foam to fully expand after unboxing.</li>
         </ol>
-        <h4 style="color: var(--mc-primary); margin-bottom: 10px; font-size: 16px;">Washing Instructions:</h4>
-        <ul style="margin-left: 20px; display: flex; flex-direction: column; gap: 8px;">
-          <li>Unzip and remove the outer mesh cover. Machine wash the cover in cold water on a gentle cycle. Air dry or tumble dry on low.</li>
-          <li>Do not wash the PVC cushion insert in a washing machine. Clean the PVC insert by wiping it down with a damp cloth and mild soap. Air dry completely before re-inserting into the cover.</li>
+        <h4 class="mc-tab-subtitle">Washing Instructions</h4>
+        <ul class="mc-tab-list">
+          <li>Remove the outer cover. Machine wash on a gentle cycle in cold water.</li>
+          <li>Air dry or tumble dry on low heat. Do not bleach.</li>
+          <li>Wipe the inner core with a damp cloth and mild soap. Air dry completely.</li>
         </ul>
       </div>
     </div>
 
+    <!-- You May Also Like -->
+    <section class="mc-related-section mc-reveal" id="mc-related-section">
+      <div class="mc-section-header">
+        <h2 class="mc-section-title">You may also <span>like</span></h2>
+      </div>
+      <div class="mc-related-grid" id="mc-related-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
   </main>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="mc-footer">
-    <div class="mc-container">
-      
-      <div class="mc-footer-top">
-        
-        <div class="mc-footer-brand">
-          <a href="index.html" class="mc-logo-container" style="margin-bottom: 20px;">
-            <div class="mc-logo-text">
-              <span class="mc-logo-more">more</span><span class="mc-logo-care">care</span>
-            </div>
-            <div class="mc-logo-tagline">Mobility & Rehabilitation Solutions</div>
-          </a>
-          <p class="mc-footer-about">Morecare is dedicated to restoring physical independence and sitting comfort through clinical design, innovative air-cell systems, and carbon fiber technology.</p>
-          <div class="mc-footer-socials">
-            <a href="https://www.facebook.com/morecare.mobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn facebook" aria-label="Facebook">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-3H14V8c0-.7.3-1.5 1.5-1.5H17V3.8c-.3-.04-1.3-.12-2.5-.12C12 3.68 10 5.12 10 8v2.5H7.5v3H10V21h4v-7.5z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/morecare.mobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn instagram" aria-label="Instagram">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@morecare.mobility" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn youtube" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#ffffff" d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51C1.228 4.39 1.1 5.4 1.1 5.4s-.2 1.637-.2 3.275v2.65c0 1.637.2 3.275.2 3.275s.128 1.01.912 1.227c1.863.51 9.388.51 9.388.51s7.524 0 9.388-.51a3.004 3.004 0 0 0 2.11-2.108c.51-1.863.51-9.388.51-9.388s0-7.525-.51-9.388z"/><polygon fill="#FF0000" points="9.545,8.432 9.545,15.568 15.818,12"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/morecaremobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn linkedin" aria-label="LinkedIn">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-          </div>
-        </div>
+  <load src="./components/footer.html" />
 
-        <div>
-          <h3 class="mc-footer-title">Products</h3>
-          <div class="mc-footer-links">
-            <a href="index.html#mc-products-section" class="mc-footer-link">Electric Wheelchairs</a>
-            <a href="index.html#mc-products-section" class="mc-footer-link">Attendant Chairs</a>
-            <a href="index.html#mc-products-section" class="mc-footer-link">Air Seat Cushions</a>
-            <a href="index.html#mc-products-section" class="mc-footer-link">Orthopedic Insoles</a>
-            <a href="index.html#mc-products-section" class="mc-footer-link">Contour Pillows</a>
-          </div>
-        </div>
+  <load src="./components/cart-drawer.html" />
 
-        <div>
-          <h3 class="mc-footer-title">Resources</h3>
-          <div class="mc-footer-links">
-            <a href="index.html#mc-quiz-section" class="mc-footer-link">Posture Fit Quiz</a>
-            <a href="index.html#mc-faq-section" class="mc-footer-link">Warranty Details</a>
-            <a href="#" class="mc-footer-link">Customer Care Center</a>
-            <a href="#" class="mc-footer-link">Become a Distributor</a>
-          </div>
-        </div>
+  <load src="./components/modals.html" />
 
-        <div>
-          <h3 class="mc-footer-title">Contact Us</h3>
-          <div class="mc-footer-links" style="font-size: 13.5px; line-height: 1.6;">
-            <div>📍 403/B, Amar Tech Park,<br>Balewadi, Pune, India</div>
-            <div>📧 mobility@morecare.in</div>
-            <div>📞 +91 9309888615</div>
-            <div style="margin-top: 10px; color: var(--mc-teal); font-weight: 700;">🟢 Support Online (9AM - 6PM)</div>
-          </div>
-        </div>
+  <load src="./components/mobile-bottom-nav.html" />
 
-      </div>
-
-      <div class="mc-footer-bottom">
-        <span class="mc-footer-copyright">© 2026 Morecare Mobility Private Limited. All rights reserved.</span>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- ==========================================================================
-       SLIDING CART DRAWER
-       ========================================================================== -->
-  <div class="mc-cart-drawer" id="mc-cart-drawer">
-    <div class="mc-cart-header">
-      <h2 class="mc-cart-title">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        Your Cart (<span class="mc-cart-count-badge">0</span>)
-      </h2>
-      <button class="mc-cart-close" id="mc-close-cart" aria-label="Close Cart">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-
-    <!-- Free Shipping Bar -->
-    <div class="mc-cart-shipping-bar">
-      <div class="mc-shipping-bar-text" id="mc-shipping-bar-text">Add <span>₹4,999</span> more for <strong>FREE shipping</strong></div>
-      <div class="mc-shipping-progress">
-        <div class="mc-shipping-progress-fill" id="mc-shipping-progress-fill"></div>
-      </div>
-    </div>
-
-    <!-- Cart Items -->
-    <div class="mc-cart-items" id="mc-cart-items">
-      <!-- Items generated dynamically via app.js -->
-    </div>
-
-    <!-- Cart Footer -->
-    <div class="mc-cart-footer">
-      <div class="mc-cart-subtotal">
-        <span>Subtotal</span>
-        <span id="mc-cart-subtotal-val">₹0</span>
-      </div>
-      <button class="mc-btn mc-btn-accent mc-cart-checkout-btn" onclick="alert('Proceeding to checkout with ' + cart.length + ' items!')">
-        Proceed to Checkout
-      </button>
-      <div style="text-align: center; font-size: 11px; color: var(--mc-text-light);">
-        🔒 Safe & Secure 256-bit SSL encrypted checkout
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       CART DYNAMIC TOAST NOTIFICATION
-       ========================================================================== -->
-  <div class="mc-cart-toast" id="mc-cart-toast">
-    <div class="mc-cart-toast-icon">
-      <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-    </div>
-    <span id="mc-cart-toast-text">Item added to cart!</span>
-  </div>
-
-  <!-- ==========================================================================
-       MOBILE BOTTOM NAVIGATION BAR
-       ========================================================================== -->
-  <div class="mc-mobile-bottom-nav">
-    <div class="mc-mobile-bottom-inner">
-      <div class="mc-mobile-bottom-item" data-target="index.html">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/></svg>
-        <span>Home</span>
-      </div>
-      <div class="mc-mobile-bottom-item" data-target="index.html#mc-products-section">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-        <span>Shop</span>
-      </div>
-      <div class="mc-mobile-bottom-item" data-target="index.html#mc-quiz-section">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
-        <span>Quiz</span>
-      </div>
-      <div class="mc-mobile-bottom-item" id="mc-mobile-cart-trigger" data-target="cart">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></svg>
-        <span>Cart</span>
-        <span class="mc-mobile-bottom-badge mc-cart-count-badge" style="display: none;">0</span>
-      </div>
-    </div>
-  </div>
+  <load src="./components/whatsapp-float.html" />
 
   <!-- Sticky Bottom Purchase Bar (Mobile) -->
   <div class="mc-mobile-sticky-bar" id="mc-mobile-sticky-bar">
     <div class="mc-sticky-info">
-      <span class="mc-sticky-title">Ergo-Air Seat Cushion</span>
-      <span class="mc-sticky-price">₹4,999</span>
+      <span class="mc-sticky-title" id="mc-sticky-title">Product</span>
+      <span class="mc-sticky-price" id="mc-sticky-price">₹0</span>
     </div>
     <button class="mc-btn mc-btn-accent mc-sticky-buy-btn" id="mc-sticky-buy-btn">Add to Cart</button>
   </div>
@@ -530,4 +202,5 @@
   <!-- Scripts -->
   <script type="module" src="src/product.js"></script>
 </body>
+
 </html>

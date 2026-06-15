@@ -1,0 +1,85 @@
+  <header class="mc-header">
+    <div class="mc-container mc-header-inner">
+
+      <!-- Hamburger -->
+      <button class="mc-action-btn mc-menu-toggle" id="mc-menu-toggle" aria-label="Open Menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Logo Image -->
+      <a href="index.html" class="mc-logo-link">
+        <img src="/images/logo.png" alt="Morecare &ndash; Mobility & Rehabilitation Solutions" class="mc-logo-img">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="mc-nav-desktop">
+        <a href="index.html" class="mc-nav-link {{homeClass}}">Home</a>
+
+        <!-- Mega Category: Products (combines CP Kids & Adults) -->
+        <div class="mc-nav-dropdown-wrapper">
+          <a href="#mc-products-section" class="mc-nav-link {{productsClass}}">
+            Products
+            <svg class="mc-chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <div class="mc-mega-menu">
+            <div class="mc-mega-menu-grid">
+              <!-- CP Kids Column -->
+              <div class="mc-mega-menu-column">
+                <h4 class="mc-mega-menu-title">Shop for CP Kids</h4>
+                <ul class="mc-mega-menu-list">
+                  <li><a href="kids.html" class="mc-mega-menu-item">CP Wheelchairs</a></li>
+                  <li><a href="kids.html" class="mc-mega-menu-item">Seating & Posture</a></li>
+                  <li><a href="kids.html" class="mc-mega-menu-item">Standing Frames</a></li>
+                  <li><a href="kids.html" class="mc-mega-menu-item">Gait Trainers</a></li>
+                  <li><a href="kids.html" class="mc-mega-menu-item">Therapy Aids</a></li>
+                </ul>
+              </div>
+              <!-- Adults Column -->
+              <div class="mc-mega-menu-column">
+                <h4 class="mc-mega-menu-title">Shop for Adults</h4>
+                <ul class="mc-mega-menu-list">
+                  <li><a href="adults.html" class="mc-mega-menu-item">Electric Wheelchairs</a></li>
+                  <li><a href="adults.html" class="mc-mega-menu-item">Seat Cushions</a></li>
+                  <li><a href="adults.html" class="mc-mega-menu-item">Orthotic Insoles</a></li>
+                  <li><a href="adults.html" class="mc-mega-menu-item">Cervical Pillows</a></li>
+                  <li><a href="adults.html" class="mc-mega-menu-item">Walking Aids</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="mc-nav-link {{aboutClass}}">About Us</a>
+        <a href="contact.html" class="mc-nav-link {{contactClass}}">Contact Us</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="mc-header-actions">
+        <button class="mc-action-btn" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+        </button>
+        <button class="mc-action-btn" aria-label="Account">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </button>
+        <button class="mc-action-btn" id="mc-open-cart" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path
+              d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM20 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          <span class="mc-action-badge mc-cart-count-badge" style="display: none;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>

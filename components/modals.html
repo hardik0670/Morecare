@@ -1,0 +1,73 @@
+  <!-- Video Lightbox Modal -->
+  <div class="mc-vtest-lightbox" id="mc-vtest-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="mc-vtest-lightbox-backdrop" id="mc-vtest-lightbox-backdrop"></div>
+    <div class="mc-vtest-lightbox-inner">
+      <button class="mc-vtest-lightbox-close" id="mc-vtest-lightbox-close" aria-label="Close video">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="mc-vtest-lightbox-video" id="mc-vtest-lightbox-video"></div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="mc-modal" id="mc-quickview-modal">
+    <div class="mc-modal-content">
+      <button class="mc-modal-close" id="mc-modal-close-btn" aria-label="Close Preview">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="mc-modal-grid">
+        <div class="mc-modal-left">
+          <div class="mc-modal-graphic-wrapper" id="mc-modal-graphic"></div>
+        </div>
+        <div class="mc-modal-right">
+          <div class="mc-modal-badges" id="mc-modal-badges"></div>
+          <span class="mc-modal-meta" id="mc-modal-meta">Category</span>
+          <h2 class="mc-modal-title" id="mc-modal-title">Product Title</h2>
+          <div class="mc-modal-price-group">
+            <span class="mc-modal-price-old" id="mc-modal-price-old"></span>
+            <span class="mc-modal-price" id="mc-modal-price">&#8377;0</span>
+            <span class="mc-modal-price-save" id="mc-modal-price-save"></span>
+          </div>
+          <p class="mc-modal-desc" id="mc-modal-desc">Description</p>
+          <div class="mc-option-group">
+            <span class="mc-option-label">Select Size</span>
+            <div class="mc-size-options" id="mc-modal-sizes"></div>
+          </div>
+          <div class="mc-modal-actions">
+            <button class="mc-btn mc-btn-accent mc-modal-add-btn" id="mc-modal-add-btn">Add to Cart</button>
+          </div>
+          <a href="#" class="mc-modal-view-full" id="mc-modal-view-full">
+            View Full Details
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REELS VIEW MODAL -->
+  <div class="mc-modal" id="mc-reels-modal">
+    <div class="mc-modal-content mc-reel-modal-content">
+      <button class="mc-modal-close" id="mc-reels-modal-close-btn" aria-label="Close Reel">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div id="mc-reels-video-container"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="mc-cart-toast" id="mc-cart-toast">
+    <div class="mc-cart-toast-icon"><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd" />
+      </svg></div>
+    <span id="mc-cart-toast-text">Item added to cart!</span>
+  </div>

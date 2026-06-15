@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
   <title>Morecare &ndash; Mobility & Rehabilitation Solutions for CP Kids & Adults</title>
-  <meta name="description" content="Shop Morecare's range of mobility & rehabilitation products. Wheelchairs, cushions, insoles, pillows & therapy aids for cerebral palsy kids and adults.">
+  <meta name="description"
+    content="Shop Morecare's range of mobility & rehabilitation products. Wheelchairs, cushions, insoles, pillows & therapy aids for cerebral palsy kids and adults.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -12,269 +14,288 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Morecare &ndash; Mobility & Rehabilitation Solutions">
-  <meta property="og:description" content="Shop premium wheelchairs, cushions, insoles, and therapy aids for CP kids and adults.">
+  <meta property="og:description"
+    content="Shop premium wheelchairs, cushions, insoles, and therapy aids for CP kids and adults.">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="src/styles/main.css">
 </head>
+
 <body class="mc-scope">
 
-  <!-- ========================================================================= 
-       ANNOUNCEMENT BAR
-       ========================================================================= -->
-  <div class="mc-announce-bar">
-    <div class="mc-announce-bar-inner">
-      <div class="mc-announce-slider">
-        <div class="mc-announce-slide active">Free Express Shipping across India on orders above &#8377;4,999!</div>
-        <div class="mc-announce-slide">Summer Sale: Get 10% off with code MORECOMFORT</div>
-        <div class="mc-announce-slide">ISO 13485 Certified &amp; FDA Registered Medical Devices</div>
-      </div>
-    </div>
-  </div>
+  <load src="./components/announce-bar.html" />
 
   <!-- ========================================================================= 
        HEADER & NAVIGATION
+       ========================================================================= -->
+  <load src="./components/header.html" homeClass="active" />
+
+  <!-- GLOBAL DEPARTMENTS SWITCHER REMOVED -->
+
+  <load src="./components/mobile-sidebar.html" />
+
+  <!-- ==============================================================
+       MOBILE HERO SECTION (mobile-only redesign)
        ============================================================== -->
-  <header class="mc-header">
-    <div class="mc-container mc-header-inner">
+  <section class="mc-mobile-hero">
 
-      <!-- Hamburger -->
-      <button class="mc-action-btn mc-menu-toggle" id="mc-menu-toggle" aria-label="Open Menu">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+    <!-- Left: tagline content -->
+    <div class="mc-mobile-hero-content">
+      <h1 class="mc-mobile-hero-heading">
+        <span class="mc-mobile-hero-line1">Every</span>
+        <span class="mc-mobile-hero-line2">Move</span>
+        <span class="mc-mobile-hero-line3">Matters.</span>
+      </h1>
+      <p class="mc-mobile-hero-sub">
+        Specialized mobility and posture solutions designed for comfort, independence and a better quality of life.
+      </p>
+    </div>
 
-      <!-- Logo Image -->
-      <a href="index.html" class="mc-logo-link">
-        <img src="/images/logo.png" alt="Morecare &ndash; Mobility & Rehabilitation Solutions" class="mc-logo-img">
-      </a>
 
-      <!-- Desktop Nav -->
-      <nav class="mc-nav-desktop">
-        <a href="index.html" class="mc-nav-link active">Home</a>
 
-        <!-- Mega Category: Products (combines CP Kids & Adults) -->
-        <div class="mc-nav-dropdown-wrapper">
-          <a href="#mc-products-section" class="mc-nav-link">
-            Products
-            <svg class="mc-chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <div class="mc-mega-menu">
-            <div class="mc-mega-menu-grid">
-              <!-- CP Kids Column -->
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Shop for CP Kids</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">CP Wheelchairs</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Seating & Posture</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Standing Frames</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Gait Trainers</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Therapy Aids</a></li>
-                </ul>
-              </div>
-              <!-- Adults Column -->
-              <div class="mc-mega-menu-column">
-                <h4 class="mc-mega-menu-title">Shop for Adults</h4>
-                <ul class="mc-mega-menu-list">
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Electric Wheelchairs</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Seat Cushions</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Orthotic Insoles</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Cervical Pillows</a></li>
-                  <li><a href="#mc-products-section" class="mc-mega-menu-item">Walking Aids</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a href="about.html" class="mc-nav-link">About Us</a>
-        <a href="contact.html" class="mc-nav-link">Contact Us</a>
-      </nav>
-
-      <!-- Header Actions -->
-      <div class="mc-header-actions">
-        <button class="mc-action-btn" aria-label="Search">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-        </button>
-        <button class="mc-action-btn" aria-label="Account">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </button>
-        <button class="mc-action-btn" id="mc-open-cart" aria-label="Cart">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM20 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          <span class="mc-action-badge mc-cart-count-badge" style="display: none;">0</span>
-        </button>
+    <!-- Right: YouTube video frame -->
+    <div class="mc-mobile-hero-video-wrap">
+      <div class="mc-mobile-hero-video-frame">
+        <div class="mc-video-overlay-blocker"></div>
+        <iframe
+          src="https://www.youtube.com/embed/9tO5qXvqf-M?autoplay=1&mute=1&loop=1&playlist=9tO5qXvqf-M&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          title="Morecare — Every Move Matters" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
-
     </div>
-  </header>
 
-  <!-- Mobile Sidebar -->
-  <div class="mc-sidebar-overlay" id="mc-sidebar-overlay"></div>
-  <aside class="mc-mobile-sidebar" id="mc-mobile-sidebar">
-    <div class="mc-mobile-sidebar-header">
-      <a href="index.html"><img src="/images/logo.png" alt="Morecare" class="mc-mobile-sidebar-logo"></a>
-      <button class="mc-action-btn" id="mc-mobile-sidebar-close" aria-label="Close Menu">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <nav class="mc-mobile-nav">
-      <a href="index.html" class="mc-mobile-nav-link" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Home</a>
+  </section>
 
-      <!-- Products Dropdown -->
-      <div class="mc-mobile-dropdown-wrapper">
-        <button class="mc-mobile-dropdown-trigger">
-          Products
-          <svg class="mc-mobile-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="mc-mobile-dropdown-content">
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">CP Kids</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">CP Wheelchairs</a></li>
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Seating &amp; Posture</a></li>
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Standing Frames</a></li>
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Gait Trainers</a></li>
-            </ul>
-          </div>
-          <div class="mc-mobile-category-group">
-            <span class="mc-mobile-category-title">Adults</span>
-            <ul class="mc-mobile-subcategory-list">
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Electric Wheelchairs</a></li>
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Seat Cushions</a></li>
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Orthotic Insoles</a></li>
-              <li><a href="#mc-products-section" class="mc-mobile-menu-item" onclick="document.getElementById('mc-mobile-sidebar-close').click()">Cervical Pillows</a></li>
-            </ul>
-          </div>
-        </div>
+  <!-- Mobile Portal Cards (mobile-only) -->
+  <div class="mc-mobile-portal-wrap">
+    <a href="kids.html" class="mc-mobile-portal-card mc-mobile-portal-pediatric">
+      <div class="mc-mobile-portal-icon pediatric-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 1 0 0-7z" />
+          <path
+            d="M19 12h-2v-1.5a2.5 2.5 0 0 0-5 0V12H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-1-1.73z" />
+          <circle cx="9" cy="16" r="1.2" fill="currentColor" />
+          <circle cx="15" cy="16" r="1.2" fill="currentColor" />
+        </svg>
       </div>
+      <div class="mc-mobile-portal-text">
+        <h2 class="mc-mobile-portal-title">Pediatric<br>Solutions</h2>
+        <p class="mc-mobile-portal-desc">Care, support and mobility solutions for children with special needs.</p>
+      </div>
+      <span class="mc-mobile-portal-cta pediatric-cta">Explore Pediatric &nbsp;&rarr;</span>
+    </a>
+    <a href="adults.html" class="mc-mobile-portal-card mc-mobile-portal-adult">
+      <div class="mc-mobile-portal-icon adult-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+          <path d="M19 8c1.5 0 3 .5 3 2s-1.5 2-3 2" />
+        </svg>
+      </div>
+      <div class="mc-mobile-portal-text">
+        <h2 class="mc-mobile-portal-title">Adult<br>Mobility Solutions</h2>
+        <p class="mc-mobile-portal-desc">Premium mobility and rehabilitation solutions for adults and elderly.</p>
+      </div>
+      <span class="mc-mobile-portal-cta adult-cta">Explore Adult &nbsp;&rarr;</span>
+    </a>
+  </div>
 
-      <a href="about.html" class="mc-mobile-nav-link">About Us</a>
-      <a href="contact.html" class="mc-mobile-nav-link">Contact Us</a>
-    </nav>
-    <div style="margin-top: auto;">
-      <a href="tel:+919309888615" class="mc-btn mc-btn-primary" style="width: 100%;">&#128222; Call Support</a>
+  <!-- Mobile Trust Icons Bar (mobile-only) -->
+  <div class="mc-mobile-trust-icons">
+    <div class="mc-mobile-trust-item">
+      <div class="mc-mobile-trust-icon-wrap">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+        </svg>
+      </div>
+      <span>Made in<br>INDIA</span>
     </div>
-  </aside>
+    <div class="mc-mobile-trust-item">
+      <div class="mc-mobile-trust-icon-wrap">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      </div>
+      <span>Trusted by<br>1000+ Families</span>
+    </div>
+    <div class="mc-mobile-trust-item">
+      <div class="mc-mobile-trust-icon-wrap">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="1" y="3" width="15" height="13" rx="2" />
+          <path d="M16 8h4l3 5v3h-7V8z" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
+        </svg>
+      </div>
+      <span>Pan India<br>Delivery</span>
+    </div>
+    <div class="mc-mobile-trust-item">
+      <div class="mc-mobile-trust-icon-wrap">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+      </div>
+      <span>Therapist<br>Backed</span>
+    </div>
+  </div>
+
+  <!-- Mobile Consultation CTA Bar (mobile-only) -->
+  <div class="mc-mobile-consult-bar">
+    <div class="mc-mobile-consult-left">
+      <div class="mc-mobile-consult-icon-wrap">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+          <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
+        </svg>
+      </div>
+      <div class="mc-mobile-consult-text">
+        <strong>Book Free Consultation</strong>
+        <span>Talk to our mobility experts for the right solution.</span>
+      </div>
+    </div>
+    <a href="tel:+916377509047" class="mc-mobile-consult-btn">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.13 1 .38 1.97.74 2.9a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.93.36 1.9.61 2.9.74A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span>Call Now<br>+91 63775 09047</span>
+    </a>
+  </div>
+
   <!-- ==============================================================
        HERO SECTION
        ============================================================== -->
   <section class="mc-hero-section mc-hero-video-layout">
     <div class="mc-hero-video-bg">
-      <iframe src="https://www.youtube.com/embed/9tO5qXvqf-M?autoplay=1&mute=1&loop=1&playlist=9tO5qXvqf-M&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" title="Morecare - Every Move Matters" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      <div class="mc-video-overlay-blocker"></div>
+      <iframe
+        src="https://www.youtube.com/embed/9tO5qXvqf-M?autoplay=1&mute=1&loop=1&playlist=9tO5qXvqf-M&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+        title="Morecare - Every Move Matters" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
     <div class="mc-hero-gradient-fade"></div>
     <div class="mc-container mc-hero-video-inner">
       <div class="mc-hero-content">
-        <div class="mc-hero-badges-row">
-          <span class="mc-hero-badge-pill mc-badge-india">Made in India</span>
-          <span class="mc-hero-badge-divider"></span>
-          <span class="mc-hero-badge-text">Trusted Worldwide.</span>
-        </div>
-        <h1 class="mc-hero-title-big">EVERY MOVE<br>MATTERS.</h1>
-        <p class="mc-hero-description">Manufacturer of <strong>assistive, mobility, and neurological rehabilitation equipment</strong> built for both children and adults.</p>
+        <h1 class="mc-hero-title-big" id="mc-hero-title">EVERY MOVE<br>MATTERS<span
+            style="color: var(--mc-lime);">.</span></h1>
+        <p class="mc-hero-description" id="mc-hero-desc">Manufacturer of <strong>assistive, mobility, and neurological
+            rehabilitation equipment</strong> built for both children and adults.</p>
         <div class="mc-hero-actions">
-          <a href="#" class="mc-btn mc-btn-primary">Download Catalogue</a>
-          <a href="#mc-maps-section" class="mc-btn mc-btn-ghost">Book a Consultation</a>
+          <a href="#mc-products-section" class="mc-btn mc-hero-btn-explore">
+            Explore Products
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </a>
+          <a href="tel:+916377509047" class="mc-btn mc-hero-btn-talk">
+            Talk to Expert
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- Trust Strip overlaid inside the hero section -->
+      <div class="mc-trust-strip mc-trust-strip-v2">
+        <div class="mc-container">
+          <div class="mc-trust-strip-inner">
+            <div class="mc-trust-item-v2">
+              <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+              </svg>
+              <div class="mc-trust-item-text"><strong>Made in India</strong><span>Designed with pride, built to global
+                  standards</span></div>
+            </div>
+            <div class="mc-trust-item-v2">
+              <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+              <div class="mc-trust-item-text"><strong>Customized Solutions</strong><span>Adaptive products tailored to
+                  every
+                  need</span></div>
+            </div>
+            <div class="mc-trust-item-v2">
+              <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+              <div class="mc-trust-item-text"><strong>Therapist-Backed</strong><span>Developed with clinical expertise
+                  for
+                  better outcomes</span></div>
+            </div>
+            <div class="mc-trust-item-v2">
+              <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <div class="mc-trust-item-text"><strong>Trusted Quality</strong><span>Durable &amp; safe, built for
+                  long-term
+                  use</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- ==============================================================
-       TRUST STRIP
-       ============================================================== -->
-  <div class="mc-trust-strip mc-trust-strip-v2">
-    <div class="mc-container">
-      <div class="mc-trust-strip-inner">
-        <div class="mc-trust-item-v2">
-          <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
-          <div class="mc-trust-item-text"><strong>Made in India</strong><span>Designed with pride, built to global standards</span></div>
+
+  <!-- ========================================================================= 
+       PORTAL GATEWAY SECTION
+       ========================================================================= -->
+  <section class="mc-portal-section">
+    <div class="mc-portal-grid">
+      <!-- Pediatric Card -->
+      <a href="kids.html" class="mc-portal-card pediatric">
+        <div class="mc-portal-icon-box">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 1 0 0-7z" />
+            <path
+              d="M19 12h-2v-1.5a2.5 2.5 0 0 0-5 0V12H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-1-1.73z" />
+            <circle cx="9" cy="16" r="1.2" fill="currentColor" />
+            <circle cx="15" cy="16" r="1.2" fill="currentColor" />
+          </svg>
         </div>
-        <div class="mc-trust-item-v2">
-          <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          <div class="mc-trust-item-text"><strong>Customized Solutions</strong><span>Adaptive products tailored to every need</span></div>
+        <h2 class="mc-portal-title">Pediatric Solutions</h2>
+        <p class="mc-portal-desc">Care, support and mobility solutions for children with special needs — Cerebral Palsy
+          & more.</p>
+        <button class="mc-portal-btn">Explore Pediatric &nbsp;→</button>
+      </a>
+
+      <!-- Adult Card -->
+      <a href="adults.html" class="mc-portal-card adult">
+        <div class="mc-portal-icon-box">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
         </div>
-        <div class="mc-trust-item-v2">
-          <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          <div class="mc-trust-item-text"><strong>Therapist-Backed</strong><span>Developed with clinical expertise for better outcomes</span></div>
-        </div>
-        <div class="mc-trust-item-v2">
-          <svg class="mc-trust-icon-v2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <div class="mc-trust-item-text"><strong>Trusted Quality</strong><span>Durable &amp; safe, built for long-term use</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ==============================================================
-       CATEGORY CIRCLES
-       ============================================================== -->
-  <section class="mc-categories-section">
-    <div class="mc-container">
-      <div class="mc-categories-list">
-        <div class="mc-category-circle-card mc-reveal" data-mega="cp-kids">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="18" r="4"/><circle cx="19" cy="18" r="4"/><path d="M5 14h14M9 10h6M9 6v8"/></svg>
-          </div>
-          <span class="mc-category-title">CP Wheelchairs</span>
-        </div>
-        <div class="mc-category-circle-card mc-reveal delay-100" data-mega="cp-kids" data-sub="cp-seating">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M3 15h18"/></svg>
-          </div>
-          <span class="mc-category-title">CP Seating</span>
-        </div>
-        <div class="mc-category-circle-card mc-reveal delay-200" data-mega="cp-kids" data-sub="cp-mobility">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 8v8M8 12h8M8 20h8"/></svg>
-          </div>
-          <span class="mc-category-title">CP Mobility</span>
-        </div>
-        <div class="mc-category-circle-card mc-reveal delay-100" data-mega="adults" data-sub="wheelchair">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="18" r="4"/><circle cx="19" cy="18" r="4"/><path d="M5 14h14M9 10h6M9 6v8"/></svg>
-          </div>
-          <span class="mc-category-title">Wheelchairs</span>
-        </div>
-        <div class="mc-category-circle-card mc-reveal delay-200" data-mega="adults" data-sub="cushion">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
-          </div>
-          <span class="mc-category-title">Cushions</span>
-        </div>
-        <div class="mc-category-circle-card mc-reveal delay-300" data-mega="adults" data-sub="insoles">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16.5 3c-4.5 9-1 14-8.5 17S4 17 9 21s11-2 11-7-1-8.5-3.5-11z"/></svg>
-          </div>
-          <span class="mc-category-title">Insoles</span>
-        </div>
-        <div class="mc-category-circle-card mc-reveal delay-300" data-mega="adults" data-sub="pillow">
-          <div class="mc-category-circle">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="5"/><path d="M2 12q5-4 10 0t10 0"/></svg>
-          </div>
-          <span class="mc-category-title">Pillows</span>
-        </div>
-      </div>
+        <h2 class="mc-portal-title">Adult Mobility Solutions</h2>
+        <p class="mc-portal-desc">Premium mobility and rehabilitation solutions for adults and elderly — designed for
+          safety & independence.</p>
+        <button class="mc-portal-btn">Explore Adults &nbsp;→</button>
+      </a>
     </div>
   </section>
+
+  <!-- CATEGORY CIRCLES REMOVED -->
+
   <!-- ==============================================================
        PRODUCT GRID
        ============================================================== -->
   <section class="mc-products-section" id="mc-products-section">
     <div class="mc-container">
       <div class="mc-section-header mc-reveal">
-        <span class="mc-section-tag">Hero Products</span>
         <h2 class="mc-section-title">Our best-selling <span>mobility solutions</span></h2>
         <p class="mc-section-desc">Handpicked products trusted by thousands of families across India.</p>
-      </div>
-
-      <!-- Mega Category Filter -->
-      <div class="mc-mega-filter-bar" id="mc-mega-filter-bar">
-        <button class="mc-mega-filter-btn active" data-mega="all">All</button>
-        <button class="mc-mega-filter-btn lime" data-mega="cp-kids">CP Kids</button>
-        <button class="mc-mega-filter-btn" data-mega="adults">Adults</button>
-      </div>
-
-      <!-- Sub-category Filter -->
-      <div class="mc-filter-tabs" id="mc-filter-tabs">
-        <!-- Populated dynamically -->
       </div>
 
       <!-- Product Grid -->
@@ -282,364 +303,717 @@
         <!-- Rendered via main.js -->
       </div>
     </div>
-  <!-- ==============================================================
-       FIT FINDER QUIZ
-       ============================================================== -->
-  <section class="mc-quiz-section" id="mc-quiz-section">
-    <div class="mc-container">
-      <div class="mc-section-header">
-        <span class="mc-section-tag" style="background: rgba(255,255,255,0.1); color: #fff;">Interactive Fit Finder</span>
-        <h2 class="mc-section-title" style="color: #fff;">Find your perfect <span style="color: var(--mc-lime);">Morecare fit</span></h2>
-        <p class="mc-section-desc" style="color: rgba(255,255,255,0.65);">Our clinical matching engine recommends the perfect mobility or wellness aid for your needs.</p>
-      </div>
-
-      <div class="mc-quiz-container mc-reveal delay-100">
-        <div class="mc-quiz-progress">
-          <div class="mc-quiz-progress-bar" id="mc-quiz-progress-bar"></div>
-        </div>
-
-        <div id="mc-quiz-quiz-screen">
-          <div class="mc-quiz-step active" data-step="1">
-            <h3 class="mc-quiz-question">1. What is your primary concern?</h3>
-            <div class="mc-quiz-options">
-              <div class="mc-quiz-option" data-val="back-pain"><span>Lower Back / Tailbone / Sciatic Pain</span><div class="mc-quiz-option-circle"></div></div>
-              <div class="mc-quiz-option" data-val="mobility"><span>Mobility Assistance / CP Child / Post-op</span><div class="mc-quiz-option-circle"></div></div>
-              <div class="mc-quiz-option" data-val="foot-pain"><span>Foot Pain / Plantar Fasciitis / Arch Strain</span><div class="mc-quiz-option-circle"></div></div>
-            </div>
-          </div>
-          <div class="mc-quiz-step" data-step="2">
-            <h3 class="mc-quiz-question">2. How many hours sitting or walking daily?</h3>
-            <div class="mc-quiz-options">
-              <div class="mc-quiz-option" data-val="sitting-short"><span>Less than 3 hours</span><div class="mc-quiz-option-circle"></div></div>
-              <div class="mc-quiz-option" data-val="sitting-medium"><span>3 to 7 hours</span><div class="mc-quiz-option-circle"></div></div>
-              <div class="mc-quiz-option" data-val="sitting-long"><span>More than 8 hours</span><div class="mc-quiz-option-circle"></div></div>
-            </div>
-          </div>
-          <div class="mc-quiz-step" data-step="3">
-            <h3 class="mc-quiz-question">3. What is your primary setting?</h3>
-            <div class="mc-quiz-options">
-              <div class="mc-quiz-option" data-val="office"><span>Office / Desk Work</span><div class="mc-quiz-option-circle"></div></div>
-              <div class="mc-quiz-option" data-val="wheelchair-user"><span>Wheelchair User / Transfer Assistance</span><div class="mc-quiz-option-circle"></div></div>
-              <div class="mc-quiz-option" data-val="standing"><span>Active Walking / Standing</span><div class="mc-quiz-option-circle"></div></div>
-            </div>
-          </div>
-          <div class="mc-quiz-nav">
-            <button class="mc-btn mc-btn-secondary mc-btn-sm" id="mc-quiz-prev" style="opacity: 0.3; pointer-events: none;">Back</button>
-            <button class="mc-btn mc-btn-lime mc-btn-sm" id="mc-quiz-next" disabled>Next</button>
-          </div>
-        </div>
-
-        <div id="mc-quiz-rec-screen" style="display: none;" class="mc-quiz-recommendation">
-          <svg width="48" height="48" fill="none" stroke="var(--mc-lime)" stroke-width="2.5" viewBox="0 0 24 24" style="margin-bottom: 16px;"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l3 3 5-6"/></svg>
-          <h3 style="font-size: 24px; color: #fff; margin-bottom: 8px;">Recommended Solution Found!</h3>
-          <p style="color: rgba(255,255,255,0.65); font-size: 14px; margin-bottom: 24px;">Based on your inputs, our matching system recommends:</p>
-          <div class="mc-quiz-rec-card" id="mc-quiz-rec-card"></div>
-          <button class="mc-btn mc-btn-secondary mc-btn-sm" id="mc-quiz-reset">Retake Quiz</button>
-        </div>
-      </div>
-    </div>
   </section>
+
+
+
+  <!-- ==============================================================
+       REAL EXPERIENCES — Video Testimonials + Google Reviews + Reels
+       ============================================================== -->
+  <section class="mc-experiences-section" id="mc-testimonials-section">
+    <div class="mc-container">
+
+      <!-- Section Header -->
+      <div class="mc-exp-header mc-reveal">
+        <h2 class="mc-exp-title">Real Experiences.<br><span>Real Impact.</span></h2>
+        <p class="mc-exp-desc">Hear from our customers who trust MoreCare for their health and well-being.</p>
+      </div>
+
+      <!-- ── Video Testimonials ── -->
+      <div class="mc-exp-block mc-reveal delay-100">
+        <div class="mc-exp-container">
+          <div class="mc-exp-block-header">
+            <div class="mc-exp-block-label">
+              <img src="/images/social/youtube-original.svg" alt="YouTube Logo" class="mc-youtube-logo" width="28" height="28">
+              <div>
+                <strong>Video Testimonials</strong>
+                <span>Real stories from real people</span>
+              </div>
+            </div>
+            <a href="https://www.youtube.com/@morecare.mobility" target="_blank" rel="noopener noreferrer"
+              class="mc-exp-view-all">
+              View all on YouTube <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+        <!-- Video Carousel -->
+        <div class="mc-vtestimonial-carousel" id="mc-vtest-carousel">
+          <button class="mc-vtest-nav mc-vtest-prev" id="mc-vtest-prev" aria-label="Previous">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div class="mc-vtest-track-wrap">
+            <div class="mc-vtest-track" id="mc-vtest-track">
+
+              <!-- Card 1 -->
+              <div class="mc-vtest-card">
+                <div class="mc-vtest-thumb" data-video-id="Z88Wa1PIQ_Y" data-start="15">
+                  <img src="https://img.youtube.com/vi/Z88Wa1PIQ_Y/maxresdefault.jpg"
+                    onerror="this.src='https://img.youtube.com/vi/Z88Wa1PIQ_Y/hqdefault.jpg'"
+                    alt="Regaining Independence" loading="lazy">
+                  <div class="mc-vtest-overlay">
+                    <button class="mc-vtest-play-btn" aria-label="Play video">
+                      <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </button>
+                    <span class="mc-vtest-duration">2:12</span>
+                  </div>
+                </div>
+                <div class="mc-vtest-meta">
+                  <p class="mc-vtest-card-title">Regaining Independence</p>
+                  <p class="mc-vtest-card-person">Ramesh Verma, Pune</p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="mc-vtest-card">
+                <div class="mc-vtest-thumb" data-video-id="62QfOvcF8DU" data-start="4">
+                  <img src="https://img.youtube.com/vi/62QfOvcF8DU/maxresdefault.jpg"
+                    onerror="this.src='https://img.youtube.com/vi/62QfOvcF8DU/hqdefault.jpg'" alt="Comfort That Cares"
+                    loading="lazy">
+                  <div class="mc-vtest-overlay">
+                    <button class="mc-vtest-play-btn" aria-label="Play video">
+                      <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </button>
+                    <span class="mc-vtest-duration">2:05</span>
+                  </div>
+                </div>
+                <div class="mc-vtest-meta">
+                  <p class="mc-vtest-card-title">Comfort That Cares</p>
+                  <p class="mc-vtest-card-person">Sunita Rao, Hyderabad</p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="mc-vtest-card">
+                <div class="mc-vtest-thumb" data-video-id="vtfVlFQ6rg0" data-start="3">
+                  <img src="https://img.youtube.com/vi/vtfVlFQ6rg0/maxresdefault.jpg"
+                    onerror="this.src='https://img.youtube.com/vi/vtfVlFQ6rg0/hqdefault.jpg'"
+                    alt="Trusted Quality & Support" loading="lazy">
+                  <div class="mc-vtest-overlay">
+                    <button class="mc-vtest-play-btn" aria-label="Play video">
+                      <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </button>
+                    <span class="mc-vtest-duration">1:58</span>
+                  </div>
+                </div>
+                <div class="mc-vtest-meta">
+                  <p class="mc-vtest-card-title">Trusted Quality &amp; Support</p>
+                  <p class="mc-vtest-card-person">Arjun Mehta, Bangalore</p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="mc-vtest-card">
+                <div class="mc-vtest-thumb" data-video-id="yx-Cog9XG_E" data-start="0">
+                  <img src="https://img.youtube.com/vi/yx-Cog9XG_E/maxresdefault.jpg"
+                    onerror="this.src='https://img.youtube.com/vi/yx-Cog9XG_E/hqdefault.jpg'"
+                    alt="My Father Walked Again" loading="lazy">
+                  <div class="mc-vtest-overlay">
+                    <button class="mc-vtest-play-btn" aria-label="Play video">
+                      <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </button>
+                    <span class="mc-vtest-duration">1:42</span>
+                  </div>
+                </div>
+                <div class="mc-vtest-meta">
+                  <p class="mc-vtest-card-title">My Father Walked Again</p>
+                  <p class="mc-vtest-card-person">Rajesh Patel, Jaipur</p>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="mc-vtest-card">
+                <div class="mc-vtest-thumb" data-video-id="LNcJT0SqwxE" data-start="0">
+                  <img src="https://img.youtube.com/vi/LNcJT0SqwxE/maxresdefault.jpg"
+                    onerror="this.src='https://img.youtube.com/vi/LNcJT0SqwxE/hqdefault.jpg'"
+                    alt="Grandma's Outing Transformed" loading="lazy">
+                  <div class="mc-vtest-overlay">
+                    <button class="mc-vtest-play-btn" aria-label="Play video">
+                      <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </button>
+                    <span class="mc-vtest-duration">2:15</span>
+                  </div>
+                </div>
+                <div class="mc-vtest-meta">
+                  <p class="mc-vtest-card-title">Grandma's Outing Transformed</p>
+                  <p class="mc-vtest-card-person">Suman Sharma, Delhi</p>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="mc-vtest-card">
+                <div class="mc-vtest-thumb" data-video-id="0Ts9uin1EOc" data-start="0">
+                  <img src="https://img.youtube.com/vi/0Ts9uin1EOc/maxresdefault.jpg"
+                    onerror="this.src='https://img.youtube.com/vi/0Ts9uin1EOc/hqdefault.jpg'"
+                    alt="Snapdragon Patient Lift Review" loading="lazy">
+                  <div class="mc-vtest-overlay">
+                    <button class="mc-vtest-play-btn" aria-label="Play video">
+                      <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    </button>
+                    <span class="mc-vtest-duration">3:04</span>
+                  </div>
+                </div>
+                <div class="mc-vtest-meta">
+                  <p class="mc-vtest-card-title">Snapdragon Patient Lift Review</p>
+                  <p class="mc-vtest-card-person">Devendra Yadav, Chennai</p>
+                </div>
+              </div>
+
+            </div><!-- /track -->
+          </div><!-- /track-wrap -->
+
+          <button class="mc-vtest-nav mc-vtest-next" id="mc-vtest-next" aria-label="Next">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div><!-- /carousel -->
+
+        <!-- Dots -->
+        <div class="mc-vtest-dots" id="mc-vtest-dots" role="tablist" aria-label="Video testimonials carousel"></div>
+        </div><!-- /exp-container -->
+      </div><!-- /video block -->
+
+      <!-- ── Google Reviews (empty — to be filled later) ── -->
+      <!-- ── Google Reviews (populated) ── -->
+      <div class="mc-exp-block mc-exp-google-block mc-reveal delay-200" id="mc-google-reviews-block">
+        <div class="mc-google-container mc-exp-container">
+          <div class="mc-exp-block-header">
+            <div class="mc-exp-block-label">
+              <!-- Google G logo -->
+              <svg class="mc-google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="28" height="28">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                <path fill="none" d="M0 0h48v48H0z" />
+              </svg>
+              <div class="mc-google-header-text">
+                <strong>Google Reviews</strong>
+                <div class="mc-google-header-sub">
+                  <span class="mc-header-rating-val">4.2</span>
+                  <div class="mc-header-stars-inline">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="url(#mc-star-4-2)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </div>
+                  <span class="mc-header-review-count">Based on 100+ customers</span>
+                  <span class="mc-header-review-count-mobile">100+ customers</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://www.google.com/search?q=morecare+jpr&amp;oq=morecare+jpr&amp;gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIKCAEQABiABBiiBDIHCAIQABjvBTIKCAMQABiABBiiBDIHCAQQABjvBTIKCAUQABiABBiiBNIBCDE5NDRqMGozqAIAsAIB&amp;sourceid=chrome&amp;ie=UTF-8#lrd=0x396db5b29f8861a3:0xdc150d7bbe6730c1,1,,,," target="_blank" rel="noopener noreferrer" class="mc-exp-view-all">
+              View all reviews <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          
+          <div class="mc-google-content-wrap">
+            <div class="mc-google-summary">
+              <div class="mc-google-summary-left">
+                <div class="mc-google-rating-box">
+                  <span class="mc-google-score">4.2</span>
+                  <div class="mc-google-stars">
+                    <!-- 4.2 Rating Stars (4 full, 1 partial) -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="url(#mc-star-4-2)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </div>
+                </div>
+                <div class="mc-google-rating-count">Based on 100+ customers</div>
+              </div>
+              
+              <div class="mc-google-bars">
+                <!-- 5 Star Bar -->
+                <div class="mc-google-bar-row">
+                  <span>5 ★</span>
+                  <div class="mc-google-bar-track">
+                    <div class="mc-google-bar-fill" style="width: 55%;"></div>
+                  </div>
+                  <span class="mc-google-bar-percent">55%</span>
+                </div>
+                <!-- 4 Star Bar -->
+                <div class="mc-google-bar-row">
+                  <span>4 ★</span>
+                  <div class="mc-google-bar-track">
+                    <div class="mc-google-bar-fill" style="width: 25%;"></div>
+                  </div>
+                  <span class="mc-google-bar-percent">25%</span>
+                </div>
+                <!-- 3 Star Bar -->
+                <div class="mc-google-bar-row">
+                  <span>3 ★</span>
+                  <div class="mc-google-bar-track">
+                    <div class="mc-google-bar-fill" style="width: 10%;"></div>
+                  </div>
+                  <span class="mc-google-bar-percent">10%</span>
+                </div>
+                <!-- 2 Star Bar -->
+                <div class="mc-google-bar-row">
+                  <span>2 ★</span>
+                  <div class="mc-google-bar-track">
+                    <div class="mc-google-bar-fill" style="width: 5%;"></div>
+                  </div>
+                  <span class="mc-google-bar-percent">5%</span>
+                </div>
+                <!-- 1 Star Bar -->
+                <div class="mc-google-bar-row">
+                  <span>1 ★</span>
+                  <div class="mc-google-bar-track">
+                    <div class="mc-google-bar-fill" style="width: 5%;"></div>
+                  </div>
+                  <span class="mc-google-bar-percent">5%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mc-google-carousel">
+              <!-- Navigation Chevrons -->
+              <button class="mc-google-nav mc-google-prev" id="mc-google-prev" aria-label="Previous" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              
+              <div class="mc-google-track-wrap">
+                <div class="mc-google-track" id="mc-google-track">
+                  <!-- Cards with review images review_01.png to review_10.png -->
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_01.png" alt="Google Review 1" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_02.png" alt="Google Review 2" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_03.png" alt="Google Review 3" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_04.png" alt="Google Review 4" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_05.png" alt="Google Review 5" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_06.png" alt="Google Review 6" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_07.png" alt="Google Review 7" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_08.png" alt="Google Review 8" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_09.png" alt="Google Review 9" class="mc-google-review-img" loading="lazy">
+                  </div>
+                  <div class="mc-google-review-card">
+                    <img src="/images/googlereviews/review_10.png" alt="Google Review 10" class="mc-google-review-img" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              
+              <button class="mc-google-nav mc-google-next" id="mc-google-next" aria-label="Next">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+              
+              <!-- Dots -->
+              <div class="mc-google-dots" id="mc-google-dots" role="tablist" aria-label="Google reviews carousel"></div>
+            </div>
+          </div>
+          
+          <!-- Definitions SVG for gradients -->
+          <svg width="0" height="0" style="position: absolute;">
+            <defs>
+              <linearGradient id="mc-star-4-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="20%" stop-color="#FBBC04" />
+                <stop offset="20%" stop-color="#D0DDE6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ── Instagram Reels (empty — to be filled later) ── -->
+      <div class="mc-exp-block mc-exp-instagram-block mc-reveal delay-300" id="mc-reels-section">
+        <div class="mc-exp-container">
+          <div class="mc-exp-block-header">
+            <div class="mc-exp-block-label">
+              <img src="/images/social/instagram-original.svg" alt="Instagram Logo" class="mc-instagram-logo" width="28" height="28">
+              <div>
+                <strong>Instagram Reels</strong>
+                <span>Glimpses of care, comfort &amp; trust</span>
+              </div>
+            </div>
+            <a href="https://www.instagram.com/morecare.mobility/" target="_blank" rel="noopener noreferrer"
+              class="mc-exp-view-all mc-ig-view-all">
+              Follow us @morecare.mobility <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <!-- Content to be added later -->
+          <div class="mc-reels-empty-state">
+            <p>Instagram Reels coming soon.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /mc-container -->
+  </section>
+
   <!-- ==============================================================
        FAQ
        ============================================================== -->
   <section class="mc-faq-section" id="mc-faq-section">
+    <!-- Floating background decors for premium SaaS feel -->
+    <svg class="mc-faq-decor mc-decor-left" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 50C20 33.4315 33.4315 20 50 20H70C86.5685 20 100 33.4315 100 50V70C100 86.5685 86.5685 100 70 100H40L20 115V50Z" fill="url(#faq-decor-grad-left)" opacity="0.15"/>
+      <circle cx="50" cy="55" r="5" fill="var(--mc-primary)" opacity="0.4"/>
+      <circle cx="65" cy="55" r="5" fill="var(--mc-primary)" opacity="0.4"/>
+      <circle cx="80" cy="55" r="5" fill="var(--mc-primary)" opacity="0.4"/>
+      <defs>
+        <linearGradient id="faq-decor-grad-left" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+          <stop stop-color="var(--mc-primary)"/>
+          <stop offset="1" stop-color="var(--mc-primary-dark)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <svg class="mc-faq-decor mc-decor-right" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="20" width="60" height="80" rx="8" fill="url(#faq-decor-grad-right)" opacity="0.15"/>
+      <line x1="45" y1="40" x2="75" y2="40" stroke="var(--mc-primary)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+      <line x1="45" y1="55" x2="75" y2="55" stroke="var(--mc-primary)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+      <line x1="45" y1="70" x2="65" y2="70" stroke="var(--mc-primary)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+      <circle cx="85" cy="95" r="12" fill="var(--mc-lime)" opacity="0.2"/>
+      <path d="M81 95L84 98L90 92" stroke="var(--mc-lime-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs>
+        <linearGradient id="faq-decor-grad-right" x1="30" y1="20" x2="90" y2="100" gradientUnits="userSpaceOnUse">
+          <stop stop-color="var(--mc-primary)"/>
+          <stop offset="1" stop-color="var(--mc-lime)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
     <div class="mc-container">
-      <div class="mc-section-header mc-reveal">
-        <span class="mc-section-tag">Frequently Asked Questions</span>
+      <div class="mc-section-header mc-reveal" style="text-align: center;">
+        <span class="mc-faq-tagline" style="font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--mc-lime-dark); letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 8px;">FAQs</span>
         <h2 class="mc-section-title">Got questions? <span>We have answers.</span></h2>
-        <p class="mc-section-desc">Learn about trial periods, shipping, warranties, and clinical testing.</p>
+        <p class="mc-section-desc" style="max-width: 600px; margin: 0 auto;">Find quick answers to common questions about Morecare products, orders, shipping, warranty and more.</p>
       </div>
-      <div class="mc-faq-list mc-reveal delay-100">
-        <div class="mc-faq-item">
-          <div class="mc-faq-question"><span>Do Morecare cushions fit on any chair?</span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
-          <div class="mc-faq-answer"><div class="mc-faq-answer-inner">Yes, our cushions fit standard office chairs, car seats, wheelchairs, and sofas. The anti-slip silica grip base ensures the cushion stays locked.</div></div>
-        </div>
-        <div class="mc-faq-item">
-          <div class="mc-faq-question"><span>What is the return or trial policy?</span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
-          <div class="mc-faq-answer"><div class="mc-faq-answer-inner">We offer a 30-day, risk-free trial for all ergonomic cushions and pillows. Return for a full refund, no questions asked.</div></div>
-        </div>
-        <div class="mc-faq-item">
-          <div class="mc-faq-question"><span>Are Morecare products medically approved?</span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
-          <div class="mc-faq-answer"><div class="mc-faq-answer-inner">Yes, our manufacturing is ISO 13485 certified and our flagship products are FDA registered, meeting strict rehabilitation criteria.</div></div>
-        </div>
-        <div class="mc-faq-item">
-          <div class="mc-faq-question"><span>Do you offer CP-specific pediatric products?</span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></div>
-          <div class="mc-faq-answer"><div class="mc-faq-answer-inner">Absolutely! Our CP Kids range includes pediatric power wheelchairs, tilt-in-space chairs, standing frames, gait trainers, and specialized therapy aids &ndash; all designed for children with cerebral palsy.</div></div>
+
+      <!-- Redesigned FAQ Single Card Wrapper with Scroll -->
+      <div class="mc-faq-card mc-reveal delay-100">
+        <div class="mc-faq-scroll-container">
+          <!-- Item 1 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <span>Can I customize a Morecare product?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Yes. Every product can be tailored — seat width, height, frame color, accessories, or specific patient dimensions. Our design team works with therapists and caregivers.</div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                  <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                </svg>
+              </div>
+              <span>How do I request customization?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Via 'Send Enquiry' on product page, WhatsApp (<a href="https://wa.me/916377509047" target="_blank" rel="noopener noreferrer">+91 63775 09047</a>), or email <a href="mailto:contactus@morecare.in">contactus@morecare.in</a>. Team sends customized quotation, design drawing, or demo video.</div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+              </div>
+              <span>What is the delivery time?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Ready products: 3–5 business days. Customized products: 7–15 days. All orders dispatched within 12–24 hours of completion with shipping insurance.</div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+              </div>
+              <span>How will my product be delivered?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">DTDC/TACKON for small shipments; VRL Logistics for large/heavy items (beds, lifts, walkers). Packed with anti-skid and protective materials.</div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+              </div>
+              <span>What payment methods do you accept?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">UPI / Net Banking / Credit & Debit Cards, NEFT / RTGS Bank Transfer, Cash (in-store only). Payments through secure, verified gateways.</div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <polyline points="9 11 11 13 15 9" />
+                </svg>
+              </div>
+              <span>What is the warranty?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Electric lifts and beds: 3 years. Manual frames and mobility aids: 1 year. Covers manufacturing defects and motor/structural components (not wear-and-tear or misuse).</div>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <span>Is after-sales support available?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Yes — spare parts, accessories, repairs always available. Replacement parts (motors, belts, wheels), video or in-person servicing, annual maintenance contracts for institutions.</div>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                </svg>
+              </div>
+              <span>How do I track my order?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Tracking ID sent via WhatsApp and email once shipped. Team also monitors delivery until it reaches your doorstep.</div>
+            </div>
+          </div>
+          <!-- Item 9 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
+              <span>Do you ship internationally?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Yes, to select international destinations. Delivery timelines and freight charges vary by country. Contact export support team for quotations.</div>
+            </div>
+          </div>
+          <!-- Item 10 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                  <line x1="12" y1="9" x2="12" y2="13" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span>What if my product arrives damaged?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Every shipment is insured and video-recorded during dispatch. Take a video and share within 24 hours — team will replace or repair per warranty conditions.</div>
+            </div>
+          </div>
+          <!-- Item 11 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </div>
+              <span>Why should I trust Morecare?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">Manufacturer-direct quality (designed and produced in Jaipur). Therapist-approved. Transparent service (real humans, no bots). Insured delivery. Customer-first approach.</div>
+            </div>
+          </div>
+          <!-- Item 12 -->
+          <div class="mc-faq-item">
+            <div class="mc-faq-question">
+              <div class="mc-faq-icon-wrapper mc-faq-icon-orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                </svg>
+              </div>
+              <span>How can I get support?</span>
+              <svg class="mc-faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div class="mc-faq-answer">
+              <div class="mc-faq-answer-inner">WhatsApp <a href="https://wa.me/916377509047" target="_blank" rel="noopener noreferrer">+91 63775 09047</a> or email <a href="mailto:contactus@morecare.in">contactus@morecare.in</a>. Support: Mon–Sat, 9 AM–6 PM.</div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Still Have Questions support block -->
+      <div class="mc-faq-support-box mc-reveal delay-200">
+        <div class="mc-support-info">
+          <div class="mc-support-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+            </svg>
+          </div>
+          <div class="mc-support-text">
+            <h3>Still have questions?</h3>
+            <p>Our support team is here to help you.</p>
+          </div>
+        </div>
+        <div class="mc-support-actions">
+          <a href="https://wa.me/916377509047" target="_blank" rel="noopener noreferrer" class="mc-support-card">
+            <div class="mc-support-card-icon whatsapp">
+              <svg viewBox="0 0 448 512" fill="currentColor" width="20" height="20">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.7-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+              </svg>
+            </div>
+            <div class="mc-support-card-text">
+              <span class="mc-support-label">WhatsApp Us</span>
+              <span class="mc-support-val">+91 63775 09047</span>
+            </div>
+          </a>
+          <a href="mailto:contactus@morecare.in" class="mc-support-card">
+            <div class="mc-support-card-icon email">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="mc-support-card-text">
+              <span class="mc-support-label">Email Us</span>
+              <span class="mc-support-val">contactus@morecare.in</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
-  <!-- ==============================================================
-       TESTIMONIALS (Google Reviews)
-       ============================================================== -->
-  <section class="mc-social-testimonials-section" id="mc-testimonials-section">
-    <div class="mc-container">
-      <div class="mc-section-header mc-reveal">
-        <span class="mc-section-tag">Customer Stories</span>
-        <h2 class="mc-section-title">Trusted by <span>real families</span></h2>
-        <p class="mc-section-desc">Hear from our community through Google Reviews.</p>
-      </div>
-      <div class="mc-reviews-row mc-reveal delay-100">
-        <div class="mc-google-review-card">
-          <div class="mc-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="mc-review-text">"The CP Pediatric Wheelchair changed our daughter's life. She can navigate her school independently now."</p>
-          <div class="mc-review-author"><span>Sunita M. Sharma</span><span>Verified Buyer</span></div>
-        </div>
-        <div class="mc-google-review-card">
-          <div class="mc-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="mc-review-text">"The Ergo-Air Cushion saved my lower back. The constant sciatic ache has completely vanished."</p>
-          <div class="mc-review-author"><span>Rajesh K. Verma</span><span>Verified Buyer</span></div>
-        </div>
-        <div class="mc-google-review-card">
-          <div class="mc-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="mc-review-text">"Excellent gait trainer for our son. The build quality is superb and customer service was outstanding."</p>
-          <div class="mc-review-author"><span>Priya D. Mehta</span><span>Verified Buyer</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ==============================================================
-       INSTAGRAM REELS SLIDESHOW
-       ============================================================== -->
-  <section class="mc-reels-section" id="mc-reels-section">
-    <div class="mc-container">
-      <div class="mc-section-header mc-reveal">
-        <span class="mc-section-tag">Follow @morecare_wellness</span>
-        <h2 class="mc-section-title">Watch our <span>Instagram Reels</span></h2>
-        <p class="mc-section-desc">See our products in action. Real stories, real impact.</p>
-      </div>
-    </div>
-    <div class="mc-reels-slideshow mc-reveal delay-100" id="mc-reels-slideshow">
-      <div class="mc-reels-track" id="mc-reels-track">
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #1476AF 0%, #09A8F2 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 1</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #0d9488 0%, #09A8F2 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 2</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #1476AF 0%, #0d5a87 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 3</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #09A8F2 0%, #1476AF 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 4</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #0d9488 0%, #1476AF 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 5</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #1476AF 0%, #09A8F2 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 6</span>
-          </div>
-        </div>
-        <!-- Duplicated for seamless infinite marquee loop -->
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #1476AF 0%, #09A8F2 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 1</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #0d9488 0%, #09A8F2 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 2</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #1476AF 0%, #0d5a87 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 3</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #09A8F2 0%, #1476AF 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 4</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #0d9488 0%, #1476AF 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 5</span>
-          </div>
-        </div>
-        <div class="mc-reel-slide">
-          <div class="mc-reel-placeholder" data-video-id="9tO5qXvqf-M" style="background: linear-gradient(135deg, #1476AF 0%, #09A8F2 100%);">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span class="mc-reel-label">Reel 6</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ==============================================================
-       FOOTER
-       ============================================================== -->
-  <footer class="mc-footer">
-    <div class="mc-container">
-      <div class="mc-footer-top">
-        <div class="mc-footer-brand">
-          <a href="index.html"><img src="/images/logo.png" alt="Morecare" class="mc-footer-logo"></a>
-          <p class="mc-footer-about">Morecare is dedicated to restoring physical independence through clinical design, innovative air-cell systems, and carbon fiber technology &ndash; for CP kids and adults alike.</p>
-          <div class="mc-footer-socials">
-            <a href="https://www.facebook.com/morecare.mobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn facebook" aria-label="Facebook">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M14 13.5h2.5l1-3H14V8c0-.7.3-1.5 1.5-1.5H17V3.8c-.3-.04-1.3-.12-2.5-.12C12 3.68 10 5.12 10 8v2.5H7.5v3H10V21h4v-7.5z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/morecare.mobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn instagram" aria-label="Instagram">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@morecare.mobility" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn youtube" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#ffffff" d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51C1.228 4.39 1.1 5.4 1.1 5.4s-.2 1.637-.2 3.275v2.65c0 1.637.2 3.275.2 3.275s.128 1.01.912 1.227c1.863.51 9.388.51 9.388.51s7.524 0 9.388-.51a3.004 3.004 0 0 0 2.11-2.108c.51-1.863.51-9.388.51-9.388s0-7.525-.51-9.388z"/><polygon fill="#FF0000" points="9.545,8.432 9.545,15.568 15.818,12"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/morecaremobility/" target="_blank" rel="noopener noreferrer" class="mc-footer-social-btn linkedin" aria-label="LinkedIn">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h3 class="mc-footer-title">CP Kids</h3>
-          <div class="mc-footer-links">
-            <a href="#mc-products-section" class="mc-footer-link">CP Wheelchairs</a>
-            <a href="#mc-products-section" class="mc-footer-link">Seating & Posture</a>
-            <a href="#mc-products-section" class="mc-footer-link">Standing Frames</a>
-            <a href="#mc-products-section" class="mc-footer-link">Gait Trainers</a>
-            <a href="#mc-products-section" class="mc-footer-link">Therapy Aids</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="mc-footer-title">Adults</h3>
-          <div class="mc-footer-links">
-            <a href="#mc-products-section" class="mc-footer-link">Electric Wheelchairs</a>
-            <a href="#mc-products-section" class="mc-footer-link">Seat Cushions</a>
-            <a href="#mc-products-section" class="mc-footer-link">Orthotic Insoles</a>
-            <a href="#mc-products-section" class="mc-footer-link">Cervical Pillows</a>
-            <a href="#mc-products-section" class="mc-footer-link">Walking Aids</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="mc-footer-title">Support</h3>
-          <div class="mc-footer-links">
-            <a href="#mc-quiz-section" class="mc-footer-link">Fit Finder Quiz</a>
-            <a href="#mc-faq-section" class="mc-footer-link">FAQs</a>
-            <a href="#" class="mc-footer-link">Warranty Info</a>
-            <a href="#" class="mc-footer-link">Customer Care</a>
-            <a href="#" class="mc-footer-link">Become a Distributor</a>
-          </div>
-        </div>
-      </div>
-      <div class="mc-footer-bottom">
-        <span class="mc-footer-copyright">&copy; 2026 Morecare Mobility Private Limited. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
-  <!-- ==============================================================
-       CART DRAWER
-       ============================================================== -->
-  <div class="mc-cart-overlay" id="mc-cart-overlay"></div>
-  <div class="mc-cart-drawer" id="mc-cart-drawer">
-    <div class="mc-cart-header">
-      <h2 class="mc-cart-title">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        Your Cart (<span class="mc-cart-count-badge">0</span>)
-      </h2>
-      <button class="mc-cart-close" id="mc-close-cart" aria-label="Close Cart">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="mc-cart-shipping-bar">
-      <div class="mc-shipping-bar-text" id="mc-shipping-bar-text">Add <span>&#8377;4,999</span> more for <strong>FREE shipping</strong></div>
-      <div class="mc-shipping-progress"><div class="mc-shipping-progress-fill" id="mc-shipping-progress-fill"></div></div>
-    </div>
-    <div class="mc-cart-items" id="mc-cart-items"></div>
-    <div class="mc-cart-footer">
-      <div class="mc-cart-subtotal"><span>Subtotal</span><span id="mc-cart-subtotal-val">&#8377;0</span></div>
-      <button class="mc-btn mc-btn-accent mc-cart-checkout-btn" onclick="alert('Proceeding to checkout!')">Proceed to Checkout</button>
-      <div style="text-align: center; font-size: 11px; color: var(--mc-text-light);">&#128274; Secure 256-bit SSL checkout</div>
-    </div>
-  </div>
+  <load src="./components/footer.html" />
 
-  <!-- QUICK VIEW MODAL -->
-  <div class="mc-modal" id="mc-quickview-modal">
-    <div class="mc-modal-content">
-      <button class="mc-modal-close" id="mc-modal-close-btn" aria-label="Close Preview">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-      <div class="mc-modal-grid">
-        <div class="mc-modal-left"><div class="mc-modal-graphic-wrapper" id="mc-modal-graphic"></div></div>
-        <div class="mc-modal-right">
-          <span class="mc-modal-meta" id="mc-modal-meta">Category</span>
-          <h2 class="mc-modal-title" id="mc-modal-title">Product Title</h2>
-          <div class="mc-modal-rating">&#9733; 4.8 <span style="color: var(--mc-text-muted);">(Verified)</span></div>
-          <div class="mc-modal-price" id="mc-modal-price">&#8377;0</div>
-          <p class="mc-modal-desc" id="mc-modal-desc">Description</p>
-          <div class="mc-option-group">
-            <span class="mc-option-label">Select Size</span>
-            <div class="mc-size-options" id="mc-modal-sizes"></div>
-          </div>
-          <div class="mc-modal-actions">
-            <button class="mc-btn mc-btn-accent mc-modal-add-btn" id="mc-modal-add-btn">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <load src="./components/cart-drawer.html" />
 
-  <!-- REELS VIEW MODAL -->
-  <div class="mc-modal" id="mc-reels-modal">
-    <div class="mc-modal-content mc-reel-modal-content">
-      <button class="mc-modal-close" id="mc-reels-modal-close-btn" aria-label="Close Reel">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-      <div id="mc-reels-video-container"></div>
-    </div>
-  </div>
+  <load src="./components/modals.html" />
 
-  <!-- TOAST -->
-  <div class="mc-cart-toast" id="mc-cart-toast">
-    <div class="mc-cart-toast-icon"><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div>
-    <span id="mc-cart-toast-text">Item added to cart!</span>
-  </div>
+  <load src="./components/mobile-bottom-nav.html" homeClass="active" />
 
-  <!-- MOBILE BOTTOM NAV -->
-  <div class="mc-mobile-bottom-nav">
-    <div class="mc-mobile-bottom-inner">
-      <div class="mc-mobile-bottom-item active" data-target="index.html">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/></svg>
-        <span>Home</span>
-      </div>
-      <div class="mc-mobile-bottom-item" data-target="mc-products-section">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-        <span>Shop</span>
-      </div>
-      <div class="mc-mobile-bottom-item" data-target="mc-quiz-section">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
-        <span>Quiz</span>
-      </div>
-      <div class="mc-mobile-bottom-item" id="mc-mobile-cart-trigger" data-target="cart">
-        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></svg>
-        <span>Cart</span>
-        <span class="mc-mobile-bottom-badge mc-cart-count-badge" style="display: none;">0</span>
-      </div>
-    </div>
-  </div>
+  <load src="./components/whatsapp-float.html" />
 
   <!-- Scripts -->
   <script type="module" src="src/main.js"></script>
 </body>
+
 </html>

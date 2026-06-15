@@ -1,0 +1,61 @@
+  <!-- Mobile Sidebar -->
+  <div class="mc-sidebar-overlay" id="mc-sidebar-overlay"></div>
+  <aside class="mc-mobile-sidebar" id="mc-mobile-sidebar">
+    <div class="mc-mobile-sidebar-header">
+      <a href="index.html"><img src="/images/logo.png" alt="Morecare" class="mc-mobile-sidebar-logo"></a>
+      <button class="mc-action-btn" id="mc-mobile-sidebar-close" aria-label="Close Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mc-mobile-nav">
+      <a href="index.html" class="mc-mobile-nav-link"
+        onclick="document.getElementById('mc-mobile-sidebar-close').click()">Home</a>
+
+      <!-- Products Dropdown -->
+      <div class="mc-mobile-dropdown-wrapper">
+        <button class="mc-mobile-dropdown-trigger">
+          Products
+          <svg class="mc-mobile-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+            viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="mc-mobile-dropdown-content">
+          <div class="mc-mobile-category-group">
+            <span class="mc-mobile-category-title">CP Kids</span>
+            <ul class="mc-mobile-subcategory-list">
+              <li><a href="kids.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">CP Wheelchairs</a></li>
+              <li><a href="kids.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Seating &amp; Posture</a></li>
+              <li><a href="kids.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Standing Frames</a></li>
+              <li><a href="kids.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Gait Trainers</a></li>
+            </ul>
+          </div>
+          <div class="mc-mobile-category-group">
+            <span class="mc-mobile-category-title">Adults</span>
+            <ul class="mc-mobile-subcategory-list">
+              <li><a href="adults.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Electric Wheelchairs</a></li>
+              <li><a href="adults.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Seat Cushions</a></li>
+              <li><a href="adults.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Orthotic Insoles</a></li>
+              <li><a href="adults.html" class="mc-mobile-menu-item"
+                  onclick="document.getElementById('mc-mobile-sidebar-close').click()">Cervical Pillows</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a href="about.html" class="mc-mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mc-mobile-nav-link">Contact Us</a>
+    </nav>
+    <div style="margin-top: auto;">
+      <a href="tel:+916377509047" class="mc-btn mc-btn-primary" style="width: 100%;">&#128222; Call Support</a>
+    </div>
+  </aside>

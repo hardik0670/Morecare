@@ -50,6 +50,9 @@ export function openCartDrawer() {
   if (DOM.cartDrawer) DOM.cartDrawer.classList.add('open');
   if (DOM.cartOverlay) DOM.cartOverlay.classList.add('active');
 
+  // Dispatch custom event to notify other UI components (like bottom nav indicator)
+  window.dispatchEvent(new CustomEvent('mc-cart-toggle', { detail: { open: true } }));
+
   // Accessibility Focus Trap: focus the close button
   setTimeout(() => {
     if (DOM.btnCloseCart) DOM.btnCloseCart.focus();
@@ -59,6 +62,9 @@ export function openCartDrawer() {
 export function closeCartDrawer() {
   if (DOM.cartDrawer) DOM.cartDrawer.classList.remove('open');
   if (DOM.cartOverlay) DOM.cartOverlay.classList.remove('active');
+
+  // Dispatch custom event
+  window.dispatchEvent(new CustomEvent('mc-cart-toggle', { detail: { open: false } }));
 }
 
 export function addToCart(productId, qty = 1, size = null) {

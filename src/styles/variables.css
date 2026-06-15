@@ -3,60 +3,74 @@
    Full-width layout system with fluid scaling for mobile → 4K
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@400;700;900&display=swap');
 
 :root {
   /* ── Font Families ── */
-  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
-  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-subheading: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body: 'Open Sans', system-ui, -apple-system, sans-serif;
   --font-lato: 'Lato', system-ui, -apple-system, sans-serif;
+  --font-articulate: 'Articulat CF Italic', 'Articulate CF Italic', 'Articulat CF', 'Articulate CF', sans-serif;
+  --font-logo: 'Arial Rounded MT Bold', sans-serif;
 
   /* ── Brand Color Palette ── */
-  --mc-primary: #1476AF;
-  --mc-primary-dark: #0d5a87;
-  --mc-primary-light: #1b89c9;
-  --mc-primary-50: #e8f4fa;
-  --mc-primary-100: #c5e3f2;
+  --mc-primary: #069DE9;
+  /* MoreCare Blue */
+  --mc-primary-dark: #1476AF;
+  /* Deep Blue Accent */
+  --mc-primary-light: #069DE9;
+  /* MoreCare Blue */
+  --mc-primary-50: #E6F2F8;
+  /* Light Blue Background */
+  --mc-primary-100: #E6F2F8;
+  /* Light Blue Background */
 
   --mc-accent: #1476AF;
-  --mc-accent-hover: #0e5f8f;
+  /* Deep Blue Accent */
+  --mc-accent-hover: #1476AF;
   --mc-accent-glow: rgba(20, 118, 175, 0.12);
 
   /* Lime Green from logo */
-  --mc-lime: #BFFF00;
-  --mc-lime-dark: #9acc00;
-  --mc-lime-glow: rgba(191, 255, 0, 0.15);
+  --mc-lime: #C2DF07;
+  /* MoreCare Green */
+  --mc-lime-dark: #C2DF07;
+  --mc-lime-glow: rgba(194, 223, 7, 0.15);
 
-  /* Cyan from logo */
-  --mc-cyan: #09A8F2;
-  --mc-cyan-glow: rgba(9, 168, 242, 0.12);
+  /* Compatibility aliases constrained to the brand palette */
+  --mc-cyan: #069DE9;
+  --mc-cyan-glow: rgba(6, 157, 233, 0.12);
 
   /* Semantic Colors */
-  --mc-teal: #0d9488;
-  --mc-teal-light: #f0fdfa;
-  --mc-coral: #f97316;
-  --mc-coral-light: #fff7ed;
-  --mc-success: #10b981;
-  --mc-error: #ef4444;
+  --mc-teal: #1476AF;
+  --mc-teal-light: #E6F2F8;
+  --mc-coral: #C2DF07;
+  --mc-coral-light: #E6F2F8;
+  --mc-success: #C2DF07;
+  --mc-error: #1476AF;
 
   /* ── Neutrals ── */
   --mc-white: #ffffff;
-  --mc-bg: #f5f8fb;
-  --mc-bg-warm: #f8f9fa;
+  --mc-bg: #E6F2F8;
+  /* Light Blue Background */
+  --mc-bg-warm: #E6F2F8;
   --mc-card-bg: #ffffff;
-  --mc-text-main: #1a2332;
-  --mc-text-body: #374151;
-  --mc-text-muted: #5a6a7a;
-  --mc-text-light: #94a3b8;
-  --mc-border: #e2e8f0;
-  --mc-border-light: #f1f5f9;
+  --mc-text-main: #1476AF;
+  --mc-text-body: #4D4D4D;
+  /* Neutral Grey body text */
+  --mc-text-muted: #4D4D4D;
+  /* Muted supporting text */
+  --mc-text-light: #4D4D4D;
+  --mc-border: #E6F2F8;
+  --mc-border-light: #E6F2F8;
 
-  /* ── Gradients (Frido-inspired) ── */
-  --mc-gradient-hero: linear-gradient(135deg, #e8f4fa 0%, #f0f7fc 40%, #f8fbfe 100%);
-  --mc-gradient-dark: linear-gradient(180deg, #1476AF 0%, #0a4d73 100%);
-  --mc-gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fbfe 100%);
-  --mc-gradient-section: linear-gradient(180deg, #f5f8fb 0%, #ffffff 100%);
-  --mc-gradient-trust: linear-gradient(90deg, #1476AF 0%, #09A8F2 50%, #0d9488 100%);
+  /* ── Gradients ── */
+  --mc-gradient-hero: linear-gradient(135deg, #E6F2F8 0%, #ffffff 100%);
+  --mc-gradient-dark: linear-gradient(180deg, #069DE9 0%, #1476AF 100%);
+  --mc-gradient-card: linear-gradient(145deg, #ffffff 0%, #E6F2F8 100%);
+  --mc-gradient-section: linear-gradient(180deg, #E6F2F8 0%, #ffffff 100%);
+  --mc-gradient-trust: linear-gradient(90deg, #C2DF07 0%, #069DE9 100%);
+  --mc-gradient-footer: linear-gradient(to bottom, #ffffff 0%, #FAFDF0 42%, #E8F4A2 75%, #C2DF07 100%);
 
   /* ── Fluid Spacing Scale (clamp-based) ── */
   --mc-space-1: 4px;
@@ -87,15 +101,17 @@
   --mc-radius-full: 9999px;
 
   /* ── Shadows (Frido: soft diffused) ── */
-  --mc-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --mc-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --mc-shadow-md: 0 4px 8px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  --mc-shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -4px rgba(15, 23, 42, 0.04);
-  --mc-shadow-xl: 0 24px 48px -12px rgba(15, 23, 42, 0.12);
-  --mc-shadow-glow: 0 0 20px rgba(20, 118, 175, 0.12);
-  --mc-shadow-glow-hover: 0 0 32px rgba(20, 118, 175, 0.2);
-  --mc-shadow-card: 0 2px 8px rgba(15, 23, 42, 0.05);
-  --mc-shadow-card-hover: 0 16px 32px -8px rgba(15, 23, 42, 0.1);
+  --mc-shadow-xs: 0 1px 2px rgba(77, 77, 77, 0.04);
+  --mc-shadow-sm: 0 1px 3px rgba(77, 77, 77, 0.06), 0 1px 2px rgba(77, 77, 77, 0.04);
+  --mc-shadow-md: 0 4px 8px -2px rgba(77, 77, 77, 0.06), 0 2px 4px -2px rgba(77, 77, 77, 0.04);
+  --mc-shadow-lg: 0 12px 24px -4px rgba(77, 77, 77, 0.08), 0 4px 8px -4px rgba(77, 77, 77, 0.04);
+  --mc-shadow-xl: 0 24px 48px -12px rgba(77, 77, 77, 0.12);
+  --mc-navy: #0B1B2B;
+  /* Base Navy Color */
+  --mc-shadow-glow: 0 8px 32px rgba(20, 118, 175, 0.3);
+  --mc-shadow-glow-hover: 0 12px 40px rgba(20, 118, 175, 0.45);
+  --mc-shadow-card: 0 2px 8px rgba(77, 77, 77, 0.05);
+  --mc-shadow-card-hover: 0 16px 32px -8px rgba(77, 77, 77, 0.1);
 
   /* ── Transitions ── */
   --mc-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -124,4 +140,40 @@
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Desktop Zoom Reduction (10-15% smaller layout & fonts) ── */
+@media (min-width: 1025px) {
+  :root {
+    /* Scaled down spacing variables */
+    --mc-space-1: 3.5px;
+    --mc-space-2: 7px;
+    --mc-space-3: 10px;
+    --mc-space-4: 14px;
+    --mc-space-5: 18px;
+    --mc-space-6: 21px;
+    --mc-space-8: 28px;
+    --mc-space-10: 35px;
+    --mc-space-12: 42px;
+    --mc-space-16: 56px;
+    --mc-space-20: 70px;
+    --mc-space-24: 84px;
+    --mc-space-32: 112px;
+
+    /* Scaled down gutter & section padding */
+    --mc-gutter: clamp(24px, 3.5vw, 96px);
+    --mc-section-py: clamp(48px, 6vw, 96px);
+
+    /* Scaled down fluid typography scale */
+    --mc-fs-xs: clamp(10px, 0.6vw, 11px);
+    --mc-fs-sm: clamp(11.5px, 0.75vw, 13px);
+    --mc-fs-base: clamp(13px, 0.9vw, 15px);
+    --mc-fs-md: clamp(14px, 1vw, 16.5px);
+    --mc-fs-lg: clamp(16px, 1.25vw, 20px);
+    --mc-fs-xl: clamp(20px, 1.8vw, 25px);
+    --mc-fs-2xl: clamp(24px, 2.2vw, 32px);
+    --mc-fs-3xl: clamp(28px, 3vw, 42px);
+    --mc-fs-4xl: clamp(36px, 4.5vw, 56px);
+    --mc-fs-hero: clamp(34px, 4.5vw, 64px);
+  }
 }

@@ -11,10 +11,14 @@ const DOM = {
   modalMeta: document.getElementById('mc-modal-meta'),
   modalTitle: document.getElementById('mc-modal-title'),
   modalPrice: document.getElementById('mc-modal-price'),
+  modalPriceOld: document.getElementById('mc-modal-price-old'),
+  modalPriceSave: document.getElementById('mc-modal-price-save'),
+  modalBadges: document.getElementById('mc-modal-badges'),
   modalDesc: document.getElementById('mc-modal-desc'),
   modalGraphic: document.getElementById('mc-modal-graphic'),
   modalSizeContainer: document.getElementById('mc-modal-sizes'),
-  modalAddBtn: document.getElementById('mc-modal-add-btn')
+  modalAddBtn: document.getElementById('mc-modal-add-btn'),
+  modalViewFull: document.getElementById('mc-modal-view-full')
 };
 
 // Tracks which element triggered the modal to restore focus after closing
@@ -36,6 +40,41 @@ export function openQuickView(productId, triggerBtn = null) {
   if (DOM.modalPrice) DOM.modalPrice.textContent = `₹${product.price.toLocaleString('en-IN')}`;
   if (DOM.modalDesc) DOM.modalDesc.textContent = product.desc;
   if (DOM.modalGraphic) DOM.modalGraphic.innerHTML = product.graphic;
+
+  // Price group: old price + savings
+  if (DOM.modalPriceOld) {
+    if (product.oldPrice && product.oldPrice > product.price) {
+      DOM.modalPriceOld.textContent = `₹${product.oldPrice.toLocaleString('en-IN')}`;
+      DOM.modalPriceOld.style.display = '';
+    } else {
+      DOM.modalPriceOld.textContent = '';
+      DOM.modalPriceOld.style.display = 'none';
+    }
+  }
+
+  if (DOM.modalPriceSave) {
+    if (product.oldPrice && product.oldPrice > product.price) {
+      const discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+      const savings = product.oldPrice - product.price;
+      DOM.modalPriceSave.textContent = `Save ₹${savings.toLocaleString('en-IN')} (${discount}% OFF)`;
+      DOM.modalPriceSave.style.display = '';
+    } else {
+      DOM.modalPriceSave.textContent = '';
+      DOM.modalPriceSave.style.display = 'none';
+    }
+  }
+
+  // Best Seller badge
+  if (DOM.modalBadges) {
+    DOM.modalBadges.innerHTML = product.bestSeller
+      ? '<span class="mc-badge mc-badge-bestseller">BEST SELLER</span>'
+      : '';
+  }
+
+  // View Full Details link
+  if (DOM.modalViewFull) {
+    DOM.modalViewFull.href = `product.html?id=${product.id}`;
+  }
 
   // Render sizes
   if (DOM.modalSizeContainer) {
@@ -70,7 +109,6 @@ export function openQuickView(productId, triggerBtn = null) {
     DOM.quickViewModal.setAttribute('aria-hidden', 'false');
   }
 
-
   // Focus trap: set focus to close button
   setTimeout(() => {
     if (DOM.modalCloseBtn) DOM.modalCloseBtn.focus();
@@ -83,7 +121,6 @@ export function closeQuickView() {
     DOM.quickViewModal.setAttribute('aria-hidden', 'true');
   }
 
-
   // Restore focus to original button
   if (triggerElement) {
     triggerElement.focus();
@@ -94,6 +131,15 @@ export function closeQuickView() {
 function setupEventListeners() {
   if (DOM.modalCloseBtn) {
     DOM.modalCloseBtn.addEventListener('click', closeQuickView);
+  }
+
+  // Click on backdrop (outside modal content) closes modal
+  if (DOM.quickViewModal) {
+    DOM.quickViewModal.addEventListener('click', (e) => {
+      if (e.target === DOM.quickViewModal) {
+        closeQuickView();
+      }
+    });
   }
 
   // Add to cart click

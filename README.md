@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Morecare Mobility — Vite Multi-Page E-Commerce
+
+A vanilla JavaScript e-commerce website for Morecare Mobility & Rehabilitation Solutions, built with Vite.
+
+## Features
+
+- **Multi-page architecture**: Home, Product Detail, Kids, Adults, About, Contact
+- **Shopping Cart**: Persistent cart drawer with localStorage, quantity controls, free shipping progress
+- **Product Catalog**: 25 SKUs (12 CP Kids + 13 Adults) with SVG graphics, ratings, sizes
+- **Quick View Modal**: Product preview with size selection & add-to-cart
+- **Mobile Navigation**: Sidebar menu, bottom nav with draggable indicator, mega-dropdowns
+- **Video Testimonials**: YouTube carousel with lightbox
+- **Instagram Reels**: Embedded reels with modal viewer
+- **FAQ Accordion**: Accessible with keyboard support
+- **Scroll Reveal**: IntersectionObserver-based animations
+- **Responsive Design**: Fluid typography/spacing (clamp), desktop zoom reduction
+
+## Tech Stack
+
+- **Vite 5.4** (ESM modules, multi-page build)
+- **Vanilla JavaScript** (no frameworks)
+- **CSS Variables** (design tokens with brand palette)
+- **Google Fonts**: Montserrat, Poppins, Open Sans, Lato
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Development server (opens in Microsoft Edge on port 5174)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+├── index.html          # Homepage
+├── product.html        # Product detail page
+├── kids.html           # CP Kids product listing
+├── adults.html         # Adults product listing
+├── about.html          # About page
+├── contact.html        # Contact page
+├── vite.config.js      # Vite configuration
+├── src/
+│   ├── main.js         # Homepage entry point
+│   ├── product.js      # Product page entry point
+│   ├── utils/
+│   │   ├── products.js # Product catalog (25 SKUs)
+│   │   └── reels.js    # Instagram reels data
+│   ├── components/
+│   │   ├── layout/     # Cart, Sidebar
+│   │   ├── sections/   # Slider, FAQ, Reels
+│   │   ├── product/    # QuickView
+│   │   └── ui/         # ScrollReveal
+│   └── styles/
+│       ├── variables.css   # Design tokens
+│       ├── reset.css       # CSS reset
+│       ├── layout.css      # Layout utilities
+│       ├── components.css  # Component styles
+│       ├── sections.css    # Section styles
+│       └── animations.css  # Animations
+└── public/             # Static assets (images, icons)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The `npm run build` command outputs to `dist/` with all HTML pages and bundled assets. Deploy the `dist/` folder to any static hosting (Netlify, Vercel, GitHub Pages, etc.).
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server on port 5174 |
+| `npm run build` | Production build to `dist/` |
+| `npm run preview` | Preview production build |
